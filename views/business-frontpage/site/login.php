@@ -1,68 +1,41 @@
 <?php
-/**
- * login.php
- *
- * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
- * @link https://github.com/p2made
- * @package yii2-startbootstrap-themes
- * @license MIT
- */
 
-/* @var $this yii\web\View */
+/** @var yii\web\View $this */
+/** @var yii\bootstrap5\ActiveForm $form */
+/** @var \common\models\LoginForm $model */
 
-use yii\bootstrap\Html;
-use yii\bootstrap\ActiveForm;
-use p2m\helpers\FA;
-use p2m\helpers\BSocial;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 
 $this->title = 'Login';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container">
+<div class="site-login">
+    <h1><?= Html::encode($this->title) ?></h1>
 
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
-			<h2><?= Html::encode($this->title) ?></h2>
+    <p>Please fill out the following fields to login:</p>
 
-			<div class="panel panel-primary">
-				<div class="panel-body">
-					<?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+    <div class="row">
+        <div class="col-lg-5">
+            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-					<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
-					<?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'password')->passwordInput() ?>
 
-					<?= $form->field($model, 'rememberMe')->checkbox() ?>
+                <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
-					<div style="color:#999;margin:1em 0">
-						If you forgot your password you can
-						<?= Html::a('reset it', ['site/request-password-reset']) ?>.
-					</div>
+                <div class="my-1 mx-0" style="color:#999;">
+                    If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
+                    <br>
+                    Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
+                </div>
 
-					<div class="form-group">
-						<?= Html::submitButton('Login', [
-							'class' => 'btn btn-primary', 'name' => 'login-button'
-						]) ?>
-					</div>
+                <div class="form-group">
+                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                </div>
 
-					<?php ActiveForm::end(); ?>
-				</div>
-			</div>
-
-			<p class="text-center">- OR -</p>
-
-			<div class="col-sm-6">
-				<?= BSocial::b('github')->caption('Login using @@@') ?>
-				<?= BSocial::b('google')->caption('Login using @@@') ?>
-			</div>
-			<div class="col-sm-6">
-				<?= BSocial::b('twitter')->caption('Login using @@@') ?>
-				<?= BSocial::b('facebook')->caption('Login using @@@') ?>
-			</div>
-		</div>
-	</div>
-
-	<hr>
-
-	<?= $this->render('_footer.php') ?>
+            <?php ActiveForm::end(); ?>
+        </div>
+    </div>
 </div>

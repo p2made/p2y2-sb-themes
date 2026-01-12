@@ -1,49 +1,31 @@
 <?php
-/**
- * requestPasswordResetToken.php
- *
- * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
- * @link https://github.com/p2made
- * @package yii2-startbootstrap-themes
- * @license MIT
- */
 
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \frontend\models\PasswordResetRequestForm */
+/** @var yii\web\View $this */
+/** @var yii\bootstrap5\ActiveForm $form */
+/** @var \frontend\models\PasswordResetRequestForm $model */
 
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 
 $this->title = 'Request password reset';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container">
+<div class="site-request-password-reset">
+    <h1><?= Html::encode($this->title) ?></h1>
 
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
-			<h2><?= Html::encode($this->title) ?></h2>
+    <p>Please fill out your email. A link to reset password will be sent there.</p>
 
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					Please fill out your email. A link to reset password will be sent there.
-				</div>
-				<div class="panel-body">
-					<?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
+    <div class="row">
+        <div class="col-lg-5">
+            <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
 
-					<?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
 
-					<div class="form-group">
-						<?= Html::submitButton('Send', ['class' => 'btn btn-primary']) ?>
-					</div>
+                <div class="form-group">
+                    <?= Html::submitButton('Send', ['class' => 'btn btn-primary']) ?>
+                </div>
 
-					<?php ActiveForm::end(); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<hr>
-
-	<?= $this->render('_footer.php') ?>
+            <?php ActiveForm::end(); ?>
+        </div>
+    </div>
 </div>
