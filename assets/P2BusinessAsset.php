@@ -9,8 +9,8 @@
  */
 
 /**
- * @class \p2m\sb\assets\P2BusinessAsset
  * @package p2made/p2y2-sb-themes
+ * @class \p2m\sb\assets\P2BusinessAsset
  */
 
 /**
@@ -22,6 +22,8 @@
  */
 
 namespace p2m\sb\assets;
+
+use yii\web\AssetBundle;
 
 class P2BusinessAsset extends AssetBundle
 {

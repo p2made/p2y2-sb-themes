@@ -9,8 +9,8 @@
  */
 
 /**
- * @class \p2m\sb\controllers\P2NavigationController
  * @package p2made/p2y2-sb-themes
+ * @class \p2m\sb\controllers\P2NavigationController
  */
 
 namespace p2m\sb\controllers;

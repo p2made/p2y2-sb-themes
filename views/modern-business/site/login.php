@@ -1,4 +1,13 @@
 <?php
+/**
+ * @p2m/sb/views/modern-business/site/login.php
+ *
+ * @author Pedro Plowman
+ * @copyright Copyright &copy; Pedro Plowman, 2026
+ * @link https://github.com/p2made
+ * @package yii2-sb-themes
+ * @license MIT
+ */
 
 /** @var yii\web\View $this */
 /** @var yii\bootstrap5\ActiveForm $form */
@@ -11,31 +20,31 @@ $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+	<h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+	<p>Please fill out the following fields to login:</p>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+	<div class="row">
+		<div class="col-lg-5">
+			<?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+				<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+				<?= $form->field($model, 'password')->passwordInput() ?>
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
+				<?= $form->field($model, 'rememberMe')->checkbox() ?>
 
-                <div class="my-1 mx-0" style="color:#999;">
-                    If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                    <br>
-                    Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
-                </div>
+				<div class="my-1 mx-0" style="color:#999;">
+					If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
+					<br>
+					Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
+				</div>
 
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                </div>
+				<div class="form-group">
+					<?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+				</div>
 
-            <?php ActiveForm::end(); ?>
-        </div>
-    </div>
+			<?php ActiveForm::end(); ?>
+		</div>
+	</div>
 </div>

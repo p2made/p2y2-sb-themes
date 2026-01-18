@@ -9,8 +9,8 @@
  */
 
 /**
- * @class \p2m\sb\controllers\P2AgencyController
  * @package p2made/p2y2-sb-themes
+ * @class \p2m\sb\controllers\P2AgencyController
  */
 
 namespace p2m\sb\controllers;

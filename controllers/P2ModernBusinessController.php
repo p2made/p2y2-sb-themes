@@ -9,8 +9,8 @@
  */
 
 /**
- * @class \p2m\sb\controllers\P2ModernBusinessController
  * @package p2made/p2y2-sb-themes
+ * @class \p2m\sb\controllers\P2ModernBusinessController
  */
 
 namespace p2m\sb\controllers;
@@ -269,4 +269,14 @@ class P2ModernBusinessController extends Controller
 			'model' => $model
 		]);
 	}
+
+	public function actionPricing()
+	{
+		return $this->render('pricing');
+	}
+
+	public function actionFaq()
+	{
+		return $this->render('faq');
+}
 }

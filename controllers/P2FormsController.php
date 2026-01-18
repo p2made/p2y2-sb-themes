@@ -9,14 +9,12 @@
  */
 
 /**
- * @class \p2m\sb\controllers\P2FormsController
  * @package p2made/p2y2-sb-themes
+ * @class \p2m\sb\controllers\P2FormsController
  */
 
 namespace p2m\sb\controllers;
 
-use frontend\models\ResendVerificationEmailForm;
-use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\web\BadRequestHttpException;
@@ -28,6 +26,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\ResendVerificationEmailForm;
+use frontend\models\VerifyEmailForm;
 
 /**
  * Site controller
