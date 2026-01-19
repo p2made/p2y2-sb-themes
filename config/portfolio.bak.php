@@ -18,19 +18,20 @@ return [
 			'showScriptName' => false,
 			'rules' => [
 				'' => 'site/index',
-
-				// Item details
 				'item-details/<id:\d+>' => 'site/item-details',
 
-				// Layout pages
+				[
+					'class' => \p2m\sb\components\P2OneBasedPageUrlRule::class,
+					'pattern' => '<page:(?:1-column|2-column|3-column|4-column)>/<p:\d+>',
+					'route' => 'site/page',
+				],
 				'<page:(?:1-column|2-column|3-column|4-column)>' => 'site/page',
 			],
 		],
 		'view' => [
 			'theme' => [
 				'pathMap' => [
-					// config/ is sibling to views/
-					'@app/views' => dirname(__DIR__) . '/views/portfolio',
+					'@app/views' => '@vendor/p2made/p2y2-sb-themes/views/portfolio',
 				],
 			],
 		],

@@ -16,13 +16,17 @@
 namespace p2m\sb\controllers;
 
 use Yii;
-
 use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use p2m\sb\models\PortfolioItem;
-use p2m\sb\models\PortfolioItemProvider;
+
+use yii\base\InvalidArgumentException;
+use yii\web\BadRequestHttpException;
+use yii\filters\VerbFilter;
 
 use yii\data\Pagination;
+use yii\web\NotFoundHttpException;
+
+use p2m\sb\models\PortfolioItem;
+use p2m\sb\models\PortfolioItemProvider;
 
 /**
  * Site controller
@@ -53,45 +57,12 @@ class P2PortfolioController extends Controller
 		return $this->render('index', [
 			'dataProvider' => $dataProvider,
 		]);
+
+		/**
+		return $this->render('index');
+		 */
 	}
 
-	public function actionPage(string $page)
-	{
-		$allowed = [
-			'1-column',
-			'2-column',
-			'3-column',
-			'4-column',
-		];
-
-		if (!in_array($page, $allowed, true))
-		{
-			throw new NotFoundHttpException('Page not found.');
-		}
-
-		$dataProvider = PortfolioItemProvider::demoProvider(8);
-
-		return $this->render($page, [
-			'dataProvider' => $dataProvider,
-		]);
-	}
-	/**
-	{
-		$allowed = [
-			'1-column-layout',
-			'2-column-layout',
-			'3-column-layout',
-			'4-column-layout',
-			'item-details',
-		];
-
-		if (!in_array($page, $allowed, true))
-		{
-			throw new NotFoundHttpException('Page not found.');
-		}
-
-		return $this->render($page);
-	}
 	public function actionPage(string $page, int $p = 0)
 	{
 		$allowed = ['1-column', '2-column', '3-column', '4-column'];
@@ -125,25 +96,8 @@ class P2PortfolioController extends Controller
 			'dataProvider' => $dataProvider,
 		]);
 	}
-	*/
 
 	public function actionItemDetails(int $id)
-	{
-		$model = PortfolioItem::demoFindOne($id, 50);
-
-		if ($model === null)
-		{
-			throw new NotFoundHttpException('Item not found.');
-		}
-
-		$related = PortfolioItem::demoRelated($id, 4, 50);
-
-		return $this->render('item-details', [
-			'model'   => $model,
-			'related'=> $related,
-		]);
-	}
-	/**
 	{
 		$model = PortfolioItem::demoFindOne($id, 50);
 
@@ -168,5 +122,5 @@ class P2PortfolioController extends Controller
 			'related' => $related,
 		]);
 	}
-	 */
 }
+

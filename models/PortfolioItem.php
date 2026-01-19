@@ -16,6 +16,7 @@
 namespace p2m\sb\models;
 
 use yii\base\Model;
+use p2m\helpers\P2PicsumHelper;
 
 class PortfolioItem extends Model
 {
@@ -43,55 +44,69 @@ class PortfolioItem extends Model
 	 */
 	public static function demoItems(int $items = 50): array
 	{
-		$ipsum = [
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.',
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.',
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!',
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?',
-		];
-
-		$results = [];
-
-		// Width for zero-padding based on item count (minimum fixed length)
-		$padWidth = strlen((string)$items);
+		$ipsum = self::ipsum();
+		$pad   = strlen((string)$items);
+		$out   = [];
 
 		for ($item = 1; $item <= $items; $item++)
 		{
-			$results[] = new self([
-				'id' => $item,
-				'title' => 'Project ' . str_pad((string)$item, $padWidth, '0', STR_PAD_LEFT),
-				'summary' => $ipsum[$item % count($ipsum)],
-				'imageUrl' => 'https://picsum.photos/seed/' . $item . '/700/300',
-				'viewUrl' => 'item-details/' . $item,
+			$out[] = new self([
+				'id'       => $item,
+				'title'    => 'Project ' . str_pad((string)$item, $pad, '0', STR_PAD_LEFT),
+				'summary'  => $ipsum,
+				'imageUrl' => P2PicsumHelper(700, 300, $item),
+				'viewUrl'  => 'item-details/' . $item,
 			]);
 		}
 
-		return $results;
+		return $out;
 	}
 
 	public static function demoFindOne(int $id, int $items = 50): ?self
 	{
-		if ($id < 1 || $id > $items)
-		{
+		if ($id < 1 || $id > $items) {
 			return null;
 		}
 
-		// Avoid generating the whole array just to fetch one item.
-		$ipsum = [
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.',
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.',
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!',
-			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?',
-		];
-
-		$padWidth = strlen((string)$items);
+		$ipsum = self::ipsum();
+		$pad = strlen((string)$items);
 
 		return new self([
-			'id' => $id,
-			'title' => 'Project ' . str_pad((string)$id, $padWidth, '0', STR_PAD_LEFT),
-			'summary' => $ipsum[array_rand($ipsum)],
-			'imageUrl' => 'https://picsum.photos/seed/' . $id . '/750/500',
-			'viewUrl' => 'item-details/' . $id,
+			'id'       => $id,
+			'title'    => 'Project ' . str_pad((string)$id, $pad, '0', STR_PAD_LEFT),
+			'summary'  => $ipsum,
+			'imageUrl' => P2PicsumHelper(750, 500, $id),
+			'viewUrl'  => 'item-details/' . $id,
 		]);
+	}
+
+	public static function demoRelated(int $id, int $count, int $items = 50): array
+	{
+		$out = [];
+
+		for ($i = 1; $i <= $count; $i++)
+		{
+			$rid = $id + $i;
+			if ($rid <= $items)
+			{
+				$out[] = self::demoFindOne($rid, $items);
+			}
+		}
+
+		return array_filter($out);
+	}
+
+	protected static function ipsum(): string
+	{
+		$ipsum = [
+			'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate.',
+			'Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus.',
+			'Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit.',
+			'Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo.',
+		];
+
+		$index = array_rand($ipsum);
+
+		return $ipsum[$index];
 	}
 }

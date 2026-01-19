@@ -13,17 +13,14 @@
  * @package p2made/p2y2-sb-themes
  */
 
+/** @var yii\web\View $this */
+
 use yii\bootstrap5\Html;
 
-/** @var yii\web\View $this */
-/** @var p2m\sb\models\PortfolioItem $model */
-/** @var p2m\sb\models\PortfolioItem[] $related */
-
-$this->title = $model->title;
-//$this->title = 'Portfolio Item Details';
+$this->title = 'Portfolio Item Details';
 $subTitle = 'Lorem ipsum dolor sit amet';
 ?>
-<!-- Page Content -->
+
 <div class="container">
 
 	<h1 class="my-4">
@@ -43,11 +40,12 @@ $subTitle = 'Lorem ipsum dolor sit amet';
 			<h3 class="my-3">Project Description</h3>
 			<p><?= Html::encode($model->summary) ?></p>
 
-			<h3 class="my-3">Details</h3>
+			<h3 class="my-3">Project Details</h3>
 			<ul>
-				<li>ID: <?= $model->id ?></li>
+				<li>Demo item</li>
 				<li>Theme: Portfolio</li>
-				<li>Status: Demo</li>
+				<li>ID: <?= Html::encode((string)$model->id) ?></li>
+				<li>Status: Placeholder</li>
 			</ul>
 		</div>
 	</div>
@@ -58,11 +56,11 @@ $subTitle = 'Lorem ipsum dolor sit amet';
 			<?php foreach ($related as $r): ?>
 				<div class="col-md-3 col-sm-6 mb-4">
 					<?= Html::a(
-						Html::img(
-							'https://picsum.photos/seed/' . $r->id . '/500/300',
-							['class' => 'img-fluid']
-						),
-						[$r->viewUrl]
+						Html::img('https://picsum.photos/seed/' . $r->id . '/500/300', [
+							'class' => 'img-fluid',
+							'alt' => '',
+						]),
+						['/item-details/' . $r->id]
 					) ?>
 				</div>
 			<?php endforeach; ?>
@@ -70,4 +68,3 @@ $subTitle = 'Lorem ipsum dolor sit amet';
 	<?php endif; ?>
 
 </div>
-<!-- /.container -->

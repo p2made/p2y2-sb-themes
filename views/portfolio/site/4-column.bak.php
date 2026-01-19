@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/site/1-column.php
+ * @p2m/sb/views/portfolio/site/4-column.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -20,7 +20,7 @@ use yii\bootstrap5\Html;
 use yii\widgets\ListView;
 
 $this->title = 'Portfolio';
-$subTitle = '1 Column Layout';
+$subTitle = '4 Column Layout';
 ?>
 <!-- Page Content -->
 <div class="container">
@@ -32,13 +32,21 @@ $subTitle = '1 Column Layout';
 
 	<?= ListView::widget([
 		'dataProvider' => $dataProvider,
-		'layout' => "{items}\n{pager}",
+		'layout' => "<div class=\"row\">{items}</div>\n{pager}",
 		'itemOptions' => ['tag' => false],
-		'itemView' => '_1columnItem',
+		'itemView' => function ($model) {
+			/** @var \p2m\sb\models\PortfolioItem $model */
+			return $this->render('_4columnItem', ['model' => $model]);
+		},
 		'pager' => [
+			'pagination' => $dataProvider->pagination,
 			'options' => ['class' => 'pagination justify-content-center'],
-			'linkOptions' => ['class' => 'page-link'],
 			'pageCssClass' => 'page-item',
+			'linkOptions' => ['class' => 'page-link'],
+			'activePageCssClass' => 'active',
+			'disabledPageCssClass' => 'disabled',
+			'prevPageLabel' => '&laquo;',
+			'nextPageLabel' => '&raquo;',
 		],
 	]) ?>
 

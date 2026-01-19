@@ -16,23 +16,25 @@
 /** @var \p2m\sb\models\PortfolioItem $model */
 
 use yii\bootstrap5\Html;
-use yii\helpers\Url;
 
-$img = 'https://picsum.photos/seed/' . $model->id . '/700/300';
-$url = Url::to(['site/item-details', 'id' => $model->id]);
+/** @var p2m\sb\models\PortfolioItem $model */
 ?>
-<div class="row">
+
+<div class="row mb-4">
 	<div class="col-md-7">
 		<?= Html::a(
-			Html::img($img, ['class' => 'img-fluid rounded mb-3 mb-md-0', 'alt' => '']),
-			$model->viewUrl ?? '#'
+			Html::img($model->imageUrl, [
+				'class' => 'img-fluid rounded',
+				'alt' => '',
+			]),
+			[$model->viewUrl]
 		) ?>
 	</div>
+
 	<div class="col-md-5">
-		<h3><?= Html::a(Html::encode($model->title), $model->viewUrl ?? '#') ?></h3>
-		<p class="card-text"><?= Html::encode($model->summary) ?></p>
-		<a class="btn btn-primary" href="#">View Project</a>
+		<h3><?= Html::encode($model->title) ?></h3>
+		<p><?= Html::encode($model->summary) ?></p>
+		<?= Html::a('View Project', [$model->viewUrl], ['class' => 'btn btn-primary']) ?>
 	</div>
 </div>
-<!-- /.row -->
 <hr>

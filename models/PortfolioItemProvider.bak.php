@@ -19,15 +19,18 @@ use yii\data\ArrayDataProvider;
 
 class PortfolioItemProvider
 {
-	public static function demoProvider(int $pageSize = 6): ArrayDataProvider
+	public static function demoProvider(int $pageSize = 4, int $items = 50, string $pageParam = 'portfolio-page'): ArrayDataProvider
 	{
 		return new ArrayDataProvider([
-			'allModels' => PortfolioItem::demoItems(),
+			'allModels' => PortfolioItem::demoItems($items),
 			'pagination' => [
 				'pageSize' => $pageSize,
+				'pageParam' => $pageParam,
+				'pageSizeParam' => $pageParam . '-size',
 			],
 			'sort' => [
 				'attributes' => ['id', 'title'],
+				'defaultOrder' => ['id' => SORT_ASC],
 			],
 		]);
 	}
