@@ -25,11 +25,12 @@ use yii\bootstrap5\Html;
 	<div class="card h-100">
 		<?= Html::a(
 			Html::img($imgUrl, [
-				'alt' => $title,
 				'class' => 'card-img-top',
+				'alt' => $title,
 			]),
 			$url
 		) ?>
+
 		<div class="card-body">
 			<h4 class="card-title">
 				<?= Html::a(Html::encode($title), $url) ?>
@@ -37,3 +38,4 @@ use yii\bootstrap5\Html;
 		</div>
 	</div>
 </div>
+<!-- /.col -->

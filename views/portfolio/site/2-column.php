@@ -34,19 +34,11 @@ $subTitle = '2 Column Layout';
 		'dataProvider' => $dataProvider,
 		'layout' => "<div class=\"row\">{items}</div>\n{pager}",
 		'itemOptions' => ['tag' => false],
-		'itemView' => function ($model) {
-			/** @var \p2m\sb\models\PortfolioItem $model */
-			return $this->render('_2columnItem', ['model' => $model]);
-		},
+		'itemView' => '_2columnItem',
 		'pager' => [
-			'pagination' => $dataProvider->pagination,
 			'options' => ['class' => 'pagination justify-content-center'],
-			'pageCssClass' => 'page-item',
 			'linkOptions' => ['class' => 'page-link'],
-			'activePageCssClass' => 'active',
-			'disabledPageCssClass' => 'disabled',
-			'prevPageLabel' => '&laquo;',
-			'nextPageLabel' => '&raquo;',
+			'pageCssClass' => 'page-item',
 		],
 	]) ?>
 

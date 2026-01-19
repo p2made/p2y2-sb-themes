@@ -22,16 +22,20 @@ $img = 'https://picsum.photos/seed/' . $model->id . '/700/400';
 <div class="col-lg-6 mb-4">
 	<div class="card h-100">
 		<?= Html::a(
-			Html::img($img, ['class' => 'card-img-top', 'alt' => '']),
-			$model->viewUrl ?? '#'
+			Html::img($model->imageUrl, [
+				'class' => 'card-img-top',
+				'alt' => '',
+			]),
+			[$model->viewUrl]
 		) ?>
 
 		<div class="card-body">
 			<h4 class="card-title">
-				<?= Html::a(Html::encode($model->title), $model->viewUrl ?? '#') ?>
+				<?= Html::a(Html::encode($model->title), [$model->viewUrl]) ?>
 			</h4>
-
 			<p class="card-text"><?= Html::encode($model->summary) ?></p>
+			<!-- < ?= Html::a('View Project', [$model->viewUrl], ['class' => 'btn btn-primary']) ? > -->
 		</div>
 	</div>
 </div>
+<!-- /.col -->

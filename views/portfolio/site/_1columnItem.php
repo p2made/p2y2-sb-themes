@@ -24,7 +24,7 @@ use yii\bootstrap5\Html;
 	<div class="col-md-7">
 		<?= Html::a(
 			Html::img($model->imageUrl, [
-				'class' => 'img-fluid rounded',
+				'class' => 'img-fluid rounded mb-3 mb-md-0',
 				'alt' => '',
 			]),
 			[$model->viewUrl]
@@ -32,9 +32,10 @@ use yii\bootstrap5\Html;
 	</div>
 
 	<div class="col-md-5">
-		<h3><?= Html::encode($model->title) ?></h3>
+		<h3><?= Html::a(Html::encode($model->title), [$model->viewUrl]) ?></h3>
 		<p><?= Html::encode($model->summary) ?></p>
 		<?= Html::a('View Project', [$model->viewUrl], ['class' => 'btn btn-primary']) ?>
 	</div>
 </div>
+<!-- /.row -->
 <hr>

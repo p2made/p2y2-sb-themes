@@ -32,7 +32,7 @@ $subTitle = '3 Column Layout';
 
 	<?= ListView::widget([
 		'dataProvider' => $dataProvider,
-		'layout' => "{items}\n{pager}",
+		'layout' => "<div class=\"row\">{items}</div>\n{pager}",
 		'itemOptions' => ['tag' => false],
 		'itemView' => '_3columnItem',
 		'pager' => [
