@@ -25,10 +25,10 @@ class PortfolioItemProvider
 			'allModels' => PortfolioItem::demoItems(),
 			'pagination' => [
 				'pageSize' => $pageSize,
+				'pageParam' => 'p',
+				'pageSizeParam' => false, // kills &per-page=...
 			],
-			'sort' => [
-				'attributes' => ['id', 'title'],
-			],
+			'sort' => false,
 		]);
 	}
 }

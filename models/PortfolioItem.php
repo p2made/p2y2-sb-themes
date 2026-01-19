@@ -16,7 +16,7 @@
 namespace p2m\sb\models;
 
 use yii\base\Model;
-use p2m\helpers\P2PicsumHelper;
+use p2m\helpers\Picsum;
 
 class PortfolioItem extends Model
 {
@@ -54,7 +54,7 @@ class PortfolioItem extends Model
 				'id'       => $item,
 				'title'    => 'Project ' . str_pad((string)$item, $pad, '0', STR_PAD_LEFT),
 				'summary'  => $ipsum,
-				'imageUrl' => P2PicsumHelper(700, 300, $item),
+				'imageUrl' => Picsum::s(700, 300, $item),
 				'viewUrl'  => 'item-details/' . $item,
 			]);
 		}
@@ -75,7 +75,7 @@ class PortfolioItem extends Model
 			'id'       => $id,
 			'title'    => 'Project ' . str_pad((string)$id, $pad, '0', STR_PAD_LEFT),
 			'summary'  => $ipsum,
-			'imageUrl' => P2PicsumHelper(750, 500, $id),
+				'imageUrl' => Picsum::s(750, 500, $id),
 			'viewUrl'  => 'item-details/' . $id,
 		]);
 	}
@@ -84,13 +84,13 @@ class PortfolioItem extends Model
 	{
 		$out = [];
 
+		// Normalise $id into 1..$items just in case.
+		$id = (($id - 1) % $items) + 1;
+
 		for ($i = 1; $i <= $count; $i++)
 		{
-			$rid = $id + $i;
-			if ($rid <= $items)
-			{
-				$out[] = self::demoFindOne($rid, $items);
-			}
+			$rid = (($id - 1 + $i) % $items) + 1; // wrap into 1..$items
+			$out[] = self::demoFindOne($rid, $items);
 		}
 
 		return array_filter($out);

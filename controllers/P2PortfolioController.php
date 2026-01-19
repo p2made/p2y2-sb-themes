@@ -55,7 +55,7 @@ class P2PortfolioController extends Controller
 		]);
 	}
 
-	public function actionPage(string $page)
+	public function actionPage(string $layout)
 	{
 		$allowed = [
 			'1-column',
@@ -64,68 +64,24 @@ class P2PortfolioController extends Controller
 			'4-column',
 		];
 
-		if (!in_array($page, $allowed, true))
-		{
-			throw new NotFoundHttpException('Page not found.');
-		}
-
-		$dataProvider = PortfolioItemProvider::demoProvider(8);
-
-		return $this->render($page, [
-			'dataProvider' => $dataProvider,
-		]);
-	}
-	/**
-	{
-		$allowed = [
-			'1-column-layout',
-			'2-column-layout',
-			'3-column-layout',
-			'4-column-layout',
-			'item-details',
-		];
-
-		if (!in_array($page, $allowed, true))
-		{
-			throw new NotFoundHttpException('Page not found.');
-		}
-
-		return $this->render($page);
-	}
-	public function actionPage(string $page, int $p = 0)
-	{
-		$allowed = ['1-column', '2-column', '3-column', '4-column'];
-
-		if (!in_array($page, $allowed, true))
-		{
-			throw new NotFoundHttpException('Page not found.');
-		}
-
-		$pageSizes = [
+		$layoutSizes = [
 			'1-column' => 4,
 			'2-column' => 6,
 			'3-column' => 6,
-			'4-column' => 8,
+			'4-column' => 12,
 		];
 
-		$pageSize = $pageSizes[$page] ?? 6;
+		if (!in_array($layout, $allowed, true))
+		{
+			throw new NotFoundHttpException('Page not found.');
+		}
 
-		$dataProvider = PortfolioItemProvider::demoProvider($pageSize, 50);
+		$dataProvider = PortfolioItemProvider::demoProvider($layoutSizes[$layout]);
 
-		$pagination = $dataProvider->getPagination();
-		$pagination->pageParam = 'p';
-		$pagination->pageSizeParam = false;
-
-		// Base params needed for pager link generation
-		$pagination->params = [
-			'page' => $page,
-		];
-
-		return $this->render($page, [
+		return $this->render($layout, [
 			'dataProvider' => $dataProvider,
 		]);
 	}
-	*/
 
 	public function actionItemDetails(int $id)
 	{
@@ -143,30 +99,4 @@ class P2PortfolioController extends Controller
 			'related'=> $related,
 		]);
 	}
-	/**
-	{
-		$model = PortfolioItem::demoFindOne($id, 50);
-
-		if ($model === null)
-		{
-			throw new NotFoundHttpException('Item not found.');
-		}
-
-		// Simple related set (pick a few nearby IDs)
-		$related = [];
-		foreach ([$id + 1, $id + 2, $id + 3, $id + 4] as $rid)
-		{
-			$r = PortfolioItem::demoFindOne($rid, 50);
-			if ($r !== null)
-			{
-				$related[] = $r;
-			}
-		}
-
-		return $this->render('item-details', [
-			'model' => $model,
-			'related' => $related,
-		]);
-	}
-	 */
 }

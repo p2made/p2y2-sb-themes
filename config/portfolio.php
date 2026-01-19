@@ -22,8 +22,9 @@ return [
 				// Item details
 				'item-details/<id:\d+>' => 'site/item-details',
 
-				// Layout pages
-				'<page:(?:1-column|2-column|3-column|4-column)>' => 'site/page',
+				// Layout pages (pretty paging)
+				'<layout:(?:1-column|2-column|3-column|4-column)>/<p:\d+>' => 'site/page',
+				'<layout:(?:1-column|2-column|3-column|4-column)>' => 'site/page',
 			],
 		],
 		'view' => [
