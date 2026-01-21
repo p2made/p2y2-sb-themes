@@ -13,7 +13,7 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
 
-use yii\helpers\Html;
+use yii\bootstrap5\Html;
 use yii\bootstrap\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use yii\captcha\Captcha;

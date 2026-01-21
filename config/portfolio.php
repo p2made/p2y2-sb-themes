@@ -1,5 +1,14 @@
 <?php
 /**
+ * @p2m/sb/config/portfolio.php
+ *
+ * @author Pedro Plowman
+ * @copyright Copyright &copy; Pedro Plowman, 2026
+ * @link https://github.com/p2made
+ * @license MIT
+ */
+
+/**
  * Theme config: portfolio
  *
  * Generated 2026-01-12
@@ -18,6 +27,9 @@ return [
 			'showScriptName' => false,
 			'rules' => [
 				'' => 'site/index',
+
+				// Stylish portfolio (single page)
+				'stylish-portfolio' => 'site/stylish-portfolio',
 
 				// Item details
 				'item-details/<id:\d+>' => 'site/item-details',

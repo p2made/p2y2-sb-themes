@@ -1,9 +1,9 @@
 <?php
 /**
- * p2y2-sb-themes/config/_main.php
+ * @p2m/sb/config/_main.php
  *
  * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2025
+ * @copyright Copyright &copy; Pedro Plowman, 2026
  * @link https://github.com/p2made
  * @license MIT
  */
@@ -16,8 +16,8 @@
 
 use yii\helpers\ArrayHelper;
 
-// Change $themeName using one of the names below to switch themes:
-$themeName = 'modern-business'; // e.g. 'agency', 'modern-business', ''
+// Change $themeName usine one of the names below to switch themes:
+$themeName = 'portfolio'; // e.g. 'agency', 'modern-business', ''
 
 /**
  * Theme names...
@@ -46,15 +46,16 @@ $themeName = 'modern-business'; // e.g. 'agency', 'modern-business', ''
  * stylish-portfolio
  */
 
-$vendorDir   = dirname(__DIR__, 2) . '/vendor';
-$themeFile   = $vendorDir . '/p2made/p2y2-sb-themes/config/' . $themeName . '.php';
-$defaultFile = $vendorDir . '/p2made/p2y2-sb-themes/config/_default.php';
+$configDir   = dirname(__DIR__, 2) . '/vendor/p2made/p2y2-sb-themes/config/';
+$themeFile   = $configDir . $themeName . '.php';
+$defaultFile = $configDir . '_default.php';
 
 $params = array_merge(
 	require __DIR__ . '/../../common/config/params.php',
 	require __DIR__ . '/../../common/config/params-local.php',
 	require __DIR__ . '/params.php',
 	require __DIR__ . '/params-local.php'
+	require $configDir . '/_params.php'
 );
 
 $config = [

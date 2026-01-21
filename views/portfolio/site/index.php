@@ -59,6 +59,3 @@ $tiles = $group['themes'] ?? [];
 	</div>
 	<!-- /.container -->
 </div>
-
-
-

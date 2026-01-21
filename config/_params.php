@@ -1,6 +1,6 @@
 <?php
 /**
- * config/_params.php
+ * @p2m/sb/config/_params.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -9,27 +9,17 @@
  */
 
 /**
- * Theme config: _params (no overrides)
- *
- * Generated 2026-01-18
+ * Theme params
  */
 
 return [
-	// Restore default SiteController (remove controllerMap override)
-	'controllerMap' => [
-		'site' => null,
+	'p2ip' => [
+		'package'   => 'p2made/p2y2-sb-themes',
+		'type'      => 'yii2-extension',
+		'author'    => 'Pedro Plowman',
+		'email'     => 'pedrofp@me.com',
+		'homepage'  => 'https://github.com/p2made',
+		'copyright' => '2026',
+		'license'   => 'MIT',
 	],
-
-	// Remove theming (no pathMap overrides)
-	'components' => [
-		'view' => [
-			'theme' => null,
-		],
-	],
-];
-?>
-<?php
-
-return [
-	'adminEmail' => 'admin@example.com',
 ];

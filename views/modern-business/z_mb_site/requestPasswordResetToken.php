@@ -13,7 +13,7 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\PasswordResetRequestForm */
 
-use yii\helpers\Html;
+use yii\bootstrap5\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = 'Request password reset';

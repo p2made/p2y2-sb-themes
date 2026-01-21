@@ -15,6 +15,7 @@
 
 use yii\bootstrap5\Html;
 use yii\helpers\Url;
+use p2m\sb\helpers\P2CopyrightHelper;
 
 /** @var yii\web\View $this */
 ?>
@@ -24,7 +25,7 @@ use yii\helpers\Url;
 		<div class="row align-items-center justify-content-between flex-column flex-sm-row">
 			<div class="col-auto">
 				<div class="small m-0 text-white">
-					&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?>
+					<?= P2CopyrightHelper::c() ?>
 				</div>
 			</div>
 			<div class="col-auto">
