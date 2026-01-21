@@ -20,7 +20,6 @@
 
 use yii\bootstrap5\Html;
 ?>
-
 <div class="col-lg-4 col-sm-6 mb-4">
 	<div class="card h-100">
 		<?= Html::a(
@@ -30,7 +29,6 @@ use yii\bootstrap5\Html;
 			]),
 			$url
 		) ?>
-
 		<div class="card-body">
 			<h4 class="card-title">
 				<?= Html::a(Html::encode($title), $url) ?>
