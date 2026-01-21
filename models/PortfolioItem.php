@@ -23,17 +23,26 @@ class PortfolioItem extends Model
 	public int $id;
 	public string $title;
 	public string $summary;
-	public string $imageUrl;
+
+	/**
+	 * @var object|string Picsum image object (stringable)
+	 */
+	public object $image;
+
 	public ?string $viewUrl = null;
 
 	public function rules(): array
 	{
 		return [
-			[['id', 'title', 'summary', 'imageUrl'], 'required'],
+			[['id', 'title', 'summary', 'image'], 'required'],
 			[['id'], 'integer'],
 			[['title'], 'string', 'max' => 255],
 			[['summary'], 'string'],
-			[['imageUrl', 'viewUrl'], 'string', 'max' => 2048],
+			[['viewUrl'], 'string', 'max' => 2048],
+
+			// Model::validate() can't validate object types well without a custom validator.
+			// This keeps things simple for the demo dataset.
+			[['image'], 'safe'],
 		];
 	}
 
@@ -44,18 +53,17 @@ class PortfolioItem extends Model
 	 */
 	public static function demoItems(int $items = 50): array
 	{
-		$ipsum = self::ipsum();
-		$pad   = strlen((string)$items);
-		$out   = [];
+		$pad = strlen((string)$items);
+		$out = [];
 
 		for ($item = 1; $item <= $items; $item++)
 		{
 			$out[] = new self([
-				'id'       => $item,
-				'title'    => 'Project ' . str_pad((string)$item, $pad, '0', STR_PAD_LEFT),
-				'summary'  => $ipsum,
-				'imageUrl' => Picsum::s(700, 300, $item),
-				'viewUrl'  => 'item-details/' . $item,
+				'id'      => $item,
+				'title'   => 'Project ' . str_pad((string)$item, $pad, '0', STR_PAD_LEFT),
+				'summary' => self::ipsum(),
+				'image'   => Picsum::s((string)$item, 700, 300), // seed, width, height
+				'viewUrl' => 'item-details/' . $item,
 			]);
 		}
 
@@ -68,15 +76,14 @@ class PortfolioItem extends Model
 			return null;
 		}
 
-		$ipsum = self::ipsum();
 		$pad = strlen((string)$items);
 
 		return new self([
-			'id'       => $id,
-			'title'    => 'Project ' . str_pad((string)$id, $pad, '0', STR_PAD_LEFT),
-			'summary'  => $ipsum,
-				'imageUrl' => Picsum::s(750, 500, $id),
-			'viewUrl'  => 'item-details/' . $id,
+			'id'      => $id,
+			'title'   => 'Project ' . str_pad((string)$id, $pad, '0', STR_PAD_LEFT),
+			'summary' => self::ipsum(),
+			'image'   => Picsum::s((string)$id, 750, 500),
+			'viewUrl' => 'item-details/' . $id,
 		]);
 	}
 
@@ -105,8 +112,6 @@ class PortfolioItem extends Model
 			'Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo.',
 		];
 
-		$index = array_rand($ipsum);
-
-		return $ipsum[$index];
+		return $ipsum[array_rand($ipsum)];
 	}
 }

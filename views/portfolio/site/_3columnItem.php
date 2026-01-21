@@ -22,7 +22,7 @@ $img = 'https://picsum.photos/seed/' . $model->id . '/700/400';
 <div class="col-lg-4 col-sm-6 mb-4">
 	<div class="card h-100">
 		<?= Html::a(
-			Html::img($model->imageUrl, [
+			$model->image->o([
 				'class' => 'card-img-top',
 				'alt' => '',
 			]),

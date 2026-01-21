@@ -23,7 +23,7 @@ use yii\bootstrap5\Html;
 <div class="row mb-4">
 	<div class="col-md-7">
 		<?= Html::a(
-			Html::img($model->imageUrl, [
+			$model->image->o([
 				'class' => 'img-fluid rounded mb-3 mb-md-0',
 				'alt' => '',
 			]),

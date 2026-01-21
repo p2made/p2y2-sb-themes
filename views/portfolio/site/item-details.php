@@ -33,7 +33,7 @@ $subTitle = 'Lorem ipsum dolor sit amet';
 
 	<div class="row">
 		<div class="col-md-8">
-			<?= Html::img($model->imageUrl, [
+			<?= $model->image->o([
 				'class' => 'img-fluid',
 				'alt' => '',
 			]) ?>
