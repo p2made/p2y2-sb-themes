@@ -34,18 +34,8 @@ class P2ModernBusinessAsset extends AssetBundle
 	];
 
 	/*
-	public $cssOptions = [
-	];
-	*/
-
-	/*
 	public $js = [
 		'js/modern-business.min.js',
-	];
-	*/
-
-	/*
-	public $jsOptions = [
 	];
 	*/
 

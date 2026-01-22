@@ -20,9 +20,9 @@ use p2m\helpers\BI;
 
 $this->title = 'Stylish Portfolio';
 
-$p2mThemeAssetUrl = $this->params['p2mThemeAssetUrl'] ?? null;
-if ($p2mThemeAssetUrl === null) {
-	throw new \yii\base\InvalidConfigException('p2mThemeAssetUrl not set; ensure the theme asset is registered in the layout.');
+$themeAssetUrl = $this->params['themeAssetUrl'] ?? null;
+if ($themeAssetUrl === null) {
+	throw new \yii\base\InvalidConfigException('themeAssetUrl not set; ensure the theme asset is registered in the layout.');
 }
 
 $extLink = static function (string $label, string $url, array $options = []): string {
@@ -127,22 +127,22 @@ $extLink = static function (string $label, string $url, array $options = []): st
 					[
 						'title' => 'Stationary',
 						'desc'  => 'A yellow pencil with envelopes on a clean, blue backdrop!',
-						'img'   => $p2mThemeAssetUrl . '/img/portfolio-1.jpg',
+						'img'   => $themeAssetUrl . '/img/portfolio-1.jpg',
 					],
 					[
 						'title' => 'Ice Cream',
 						'desc'  => 'A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!',
-						'img'   => $p2mThemeAssetUrl . '/img/portfolio-2.jpg',
+						'img'   => $themeAssetUrl . '/img/portfolio-2.jpg',
 					],
 					[
 						'title' => 'Strawberries',
 						'desc'  => 'Strawberries are such a tasty snack, especially with a little sugar on top!',
-						'img'   => $p2mThemeAssetUrl . '/img/portfolio-3.jpg',
+						'img'   => $themeAssetUrl . '/img/portfolio-3.jpg',
 					],
 					[
 						'title' => 'Workspace',
 						'desc'  => 'A yellow workspace with some scissors, pencils, and other objects.',
-						'img'   => $p2mThemeAssetUrl . '/img/portfolio-4.jpg',
+						'img'   => $themeAssetUrl . '/img/portfolio-4.jpg',
 					],
 				];
 
@@ -185,13 +185,3 @@ $extLink = static function (string $label, string $url, array $options = []): st
 		</small>
 	</div>
 </div>
-
-
-
-
-bg-callout.jpg
-bg-masthead.jpg
-portfolio-1.jpg
-portfolio-2.jpg
-portfolio-3.jpg
-portfolio-4.jpg

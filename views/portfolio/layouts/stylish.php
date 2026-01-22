@@ -22,7 +22,7 @@ use p2m\sb\assets\P2StylishPortfolioAsset;
 
 // Register using the View instance ($this), then store into $this->view->params
 //$bundle = P2StylishPortfolioAsset::register($this);
-//$this->view->params['p2mThemeAssetUrl'] = $bundle->baseUrl;
+//$this->view->params['themeAssetUrl'] = $bundle->baseUrl;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

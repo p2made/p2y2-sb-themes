@@ -23,9 +23,9 @@ $appName   = Yii::$app->name;
 $pageTitle = 'Portfolio';
 //$pageTitle = Html::encode($this->title);
 
-$p2mThemeAssetUrl = $this->params['p2mThemeAssetUrl'] ?? null;
-if ($p2mThemeAssetUrl === null) {
-	throw new \yii\base\InvalidConfigException('p2mThemeAssetUrl not set; ensure the theme asset is registered in the layout.');
+$themeAssetUrl = $this->params['themeAssetUrl'] ?? null;
+if ($themeAssetUrl === null) {
+	throw new \yii\base\InvalidConfigException('themeAssetUrl not set; ensure the theme asset is registered in the layout.');
 }
 
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
@@ -43,7 +43,7 @@ $this->registerMetaTag([
 ]);
 $this->registerLinkTag([
 	'rel' => 'shortcut icon',
-	'href' => $p2mThemeAssetUrl . '/ico/favicon.ico'
+	'href' => $themeAssetUrl . '/ico/favicon.ico'
 ]);
 
 

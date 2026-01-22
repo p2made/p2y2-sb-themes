@@ -13,13 +13,16 @@
  */
 
 return [
-	'p2ip' => [
-		'package'   => 'p2made/p2y2-sb-themes',
-		'type'      => 'yii2-extension',
-		'author'    => 'Pedro Plowman',
-		'email'     => 'pedrofp@me.com',
-		'homepage'  => 'https://github.com/p2made',
-		'copyright' => '2026',
-		'license'   => 'MIT',
+	'p2params' => [
+		'ip' => [
+			'item'     => 'p2made/p2y2-sb-themes',
+			'type'     => 'yii2-extension',
+			'author'   => 'Pedro Plowman',
+			'email'    => 'pedrofp@me.com',
+			'page'     => 'https://github.com/p2made',
+			'year'     => '2026',
+			'license'  => 'MIT',
+			//'link'     => '_link_to_license_if_included_',
+		],
 	],
 ];

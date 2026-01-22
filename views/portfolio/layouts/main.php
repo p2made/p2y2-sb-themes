@@ -20,7 +20,7 @@ use yii\bootstrap5\Html;
 
 use p2m\sb\assets\P2PortfolioDemoAsset;
 
-$this->params['p2mThemeAssetUrl'] = P2PortfolioDemoAsset::register($this)->baseUrl;
+$this->params['themeAssetUrl'] = P2PortfolioDemoAsset::register($this)->baseUrl;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

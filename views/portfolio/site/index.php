@@ -19,9 +19,9 @@ use p2m\sb\assets\P2PortfolioDemoAsset;
 
 $this->title = 'Portfolio';
 
-$p2mThemeAssetUrl = $this->params['p2mThemeAssetUrl'] ?? null;
-if ($p2mThemeAssetUrl === null) {
-	throw new \yii\base\InvalidConfigException('p2mThemeAssetUrl not set; ensure the theme asset is registered in the layout.');
+$themeAssetUrl = $this->params['themeAssetUrl'] ?? null;
+if ($themeAssetUrl === null) {
+	throw new \yii\base\InvalidConfigException('themeAssetUrl not set; ensure the theme asset is registered in the layout.');
 }
 
 // Load demo data
@@ -44,7 +44,7 @@ $tiles = $group['themes'] ?? [];
 					$imgRel = $tile['img'] ?? null;
 
 					$imgUrl = $imgRel
-						? $p2mThemeAssetUrl . $imgRel
+						? $themeAssetUrl . $imgRel
 						: '';
 				?>
 
