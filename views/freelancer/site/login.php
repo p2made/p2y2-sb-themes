@@ -1,54 +1,41 @@
 <?php
 
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \common\models\LoginForm */
+/** @var yii\web\View $this */
+/** @var yii\bootstrap5\ActiveForm $form */
+/** @var \common\models\LoginForm $model */
 
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use p2m\helpers\FA;
-use p2m\helpers\BSocial;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<!-- Header -->
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1>
-					<?= Html::encode($this->title) ?>
-				</h1>
-			</div>
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="panel text-primary text-left">
-					<div class="panel-body">
-						<?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+<div class="site-login">
+	<h1><?= Html::encode($this->title) ?></h1>
 
-						<?= $form->field($model, 'username')->textInput([
-							'autofocus' => true
-						]) ?>
+	<p>Please fill out the following fields to login:</p>
 
-						<?= $form->field($model, 'password')->passwordInput() ?>
+	<div class="row">
+		<div class="col-lg-5">
+			<?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-						<?= $form->field($model, 'rememberMe')->checkbox() ?>
+				<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
-						<div style="color:#999;margin:1em 0">
-							If you forgot your password you can
-							<?= Html::a('reset it', ['site/request-password-reset']) ?>.
-						</div>
+				<?= $form->field($model, 'password')->passwordInput() ?>
 
-						<div class="form-group">
-							<?= Html::submitButton('Login', [
-								'class' => 'btn btn-primary', 'name' => 'login-button'
-							]) ?>
-						</div>
+				<?= $form->field($model, 'rememberMe')->checkbox() ?>
 
-						<?php ActiveForm::end(); ?>
-					</div>
+				<div class="my-1 mx-0" style="color:#999;">
+					If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
+					<br>
+					Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
 				</div>
-			</div>
+
+				<div class="form-group">
+					<?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+				</div>
+
+			<?php ActiveForm::end(); ?>
 		</div>
 	</div>
-</header>
+</div>

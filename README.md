@@ -27,19 +27,19 @@ The preferred way to install P2 Start Bootstrap Themes is through [composer](htt
 Depending on your composer installation, run *one* of the following commands:
 
 ```
-composer require --prefer-dist p2made/p2y2-startbootstrap-themes "^5.0"
+composer require --prefer-dist p2made/p2y2-startbootstrap-themes "dev-5.0.0-dev"
 ```
 
 or
 
 ```
-php composer.phar require --prefer-dist p2made/p2y2-startbootstrap-themes "^5.0"
+php composer.phar require --prefer-dist p2made/p2y2-startbootstrap-themes "dev-5.0.0-dev"
 ```
 
 Alternatively add:
 
 ```
-		"p2made/p2y2-startbootstrap-themes": "^5.0"
+		"p2made/p2y2-startbootstrap-themes": "dev-5.0.0-dev"
 ```
 
 to the requires section of your `composer.json` file & P2 Start Bootstrap Themes will be installed next time you run `composer update`.

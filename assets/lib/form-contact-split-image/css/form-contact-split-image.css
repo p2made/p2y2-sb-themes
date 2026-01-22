@@ -1,0 +1,11 @@
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.bg-image {
+  background-image: url('https://source.unsplash.com/kKvQJ6rK6S4/660x1000');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

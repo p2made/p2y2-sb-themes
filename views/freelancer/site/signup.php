@@ -1,42 +1,35 @@
 <?php
 
-/* @var $this yii\web\View */
-/* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \frontend\models\SignupForm */
+/** @var yii\web\View $this */
+/** @var yii\bootstrap5\ActiveForm $form */
+/** @var \frontend\models\SignupForm $model */
 
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 
 $this->title = 'Signup';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<header>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1>
-					<?= Html::encode($this->title) ?>
-				</h1>
-			</div>
-			<div class="col-lg-6 col-lg-offset-3">
-				<div class="panel text-primary text-left">
-					<div class="panel-body">
-						<?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+<div class="site-signup">
+	<h1><?= Html::encode($this->title) ?></h1>
 
-							<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+	<p>Please fill out the following fields to signup:</p>
 
-							<?= $form->field($model, 'email') ?>
+	<div class="row">
+		<div class="col-lg-5">
+			<?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
 
-							<?= $form->field($model, 'password')->passwordInput() ?>
+				<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 
-							<div class="form-group">
-								<?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
-							</div>
+				<?= $form->field($model, 'email') ?>
 
-						<?php ActiveForm::end(); ?>
-					</div>
+				<?= $form->field($model, 'password')->passwordInput() ?>
+
+				<div class="form-group">
+					<?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
 				</div>
-			</div>
+
+			<?php ActiveForm::end(); ?>
 		</div>
 	</div>
-</header>
+</div>

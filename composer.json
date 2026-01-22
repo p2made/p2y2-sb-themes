@@ -1,17 +1,19 @@
 {
-	"name": "p2made/p2y2-startbootstrap-themes",
+	"name": "p2made/p2y2-sb-themes",
 	"description": "Themes from Start Bootstrap, http://startbootstrap.com/, as UIs for Yii 2 Framework.",
 	"type": "yii2-extension",
 	"keywords": [
 		"yii", "yii2", "PHP",
 		"asset", "bundle",
 		"Start-Bootstrap",
-		"ui", "user-interface", "theme"
+		"ui", "user-interface", "theme",
+		"p2y2", "p2made"
 	],
+	"homepage": "https://github.com/p2made/p2y2-sb-themes",
 	"license": "MIT",
 	"support": {
-		"issues": "https://github.com/p2made/p2y2-startbootstrap-themes/issues?state=open",
-		"source": "https://github.com/p2made/p2y2-startbootstrap-themes"
+		"issues": "https://github.com/p2made/p2y2-sb-themes/issues?state=open",
+		"source": "https://github.com/p2made/p2y2-sb-themes"
 	},
 	"authors": [
 		{
@@ -20,15 +22,14 @@
 			"homepage": "https://github.com/p2made"
 		}
 	],
-
 	"minimum-stability": "dev",
-
+	"prefer-stable": true,
 	"require": {
-		"p2made/p2y2-things": "^5.0"
+		"p2made/p2y2-things": "dev-5.0-dev"
 	},
 	"autoload": {
 		"psr-4": {
-			"p2m\\SB\\": ""
+			"p2m\\sb\\": ""
 		}
 	}
 }

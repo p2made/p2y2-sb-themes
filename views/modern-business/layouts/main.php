@@ -1,26 +1,43 @@
 <?php
 /**
- * main.php
+ * @p2m/sb/views/modern-business/layouts/main.php
  *
  * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
+ * @copyright Copyright &copy; Pedro Plowman, 2026
  * @link https://github.com/p2made
- * @package yii2-startbootstrap-themes
+ * @package yii2-sb-themes
  * @license MIT
  */
 
-/* @var $this \yii\web\View */
-/* @var $content string */
+/** @var \yii\web\View $this */
+/** @var string $content */
 
-$layout = 'primary';
-$actionId = Yii::$app->controller->action->id;
-$entryIds  = [NULL, 'login', 'signup', 'request-password-reset'];
-$foundId = array_search($actionId, $entryIds);
+use yii\bootstrap5\Html;
 
-if (false !== $foundId) {
-	$layout = 'user-entry';
-}
+use common\widgets\Alert;
+use yii\bootstrap5\Breadcrumbs;
+use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
 
-echo $this->render(
-	$layout, ['content' => $content]
-);
+use p2m\sb\assets\P2ModernBusinessAsset;
+
+$this->params['themeAssetUrl'] = P2ModernBusinessAsset::register($this)->baseUrl;
+
+?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+	<?= $this->render('_head') ?>
+</head>
+<body class="d-flex flex-column h-100">
+<?php $this->beginBody() ?>
+	<main class="flex-shrink-0">
+		<?= $this->render('_navbar') ?>
+		<?= $content ?>
+	</main>
+	<?= $this->render('_footer') ?>
+<?php $this->endBody() ?>
+</body>
+</html>
+<?php $this->endPage(); ?>

@@ -1,52 +1,31 @@
 <?php
 /**
- * login.php
+ * @p2m/sb/views/modern-business/site/login.php
  *
  * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
+ * @copyright Copyright &copy; Pedro Plowman, 2026
  * @link https://github.com/p2made
- * @package yii2-startbootstrap-themes
+ * @package yii2-sb-themes
  * @license MIT
  */
 
-/* @var $this yii\web\View */
+/** @var yii\web\View $this */
+/** @var yii\bootstrap5\ActiveForm $form */
+/** @var \common\models\LoginForm $model */
 
-use yii\bootstrap\Html;
-use yii\bootstrap\ActiveForm;
-use p2m\helpers\FA;
-use p2m\helpers\BSocial;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\ActiveForm;
 
 $this->title = 'Login';
-
-$fieldOptions1 = [
-	'options' => ['class' => 'form-group has-feedback', 'autofocus' => 'autofocus'],
-	'inputTemplate' => "{input}<i class='glyphicon glyphicon-envelope form-control-feedback'></i>",
-];
-
-$fieldOptions2 = [
-	'options' => ['class' => 'form-group has-feedback'],
-	'inputTemplate' => "{input}<i class='glyphicon glyphicon-lock form-control-feedback'></i>",
-];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="site-login">
+	<h1><?= Html::encode($this->title) ?></h1>
 
-<div class="container">
+	<p>Please fill out the following fields to login:</p>
 
-	<!-- Page Heading -->
 	<div class="row">
-		<div class="col-lg-12">
-			<h1 class="page-header"><?= Html::encode($this->title) ?>
-				<small>to start your session</small>
-			</h1>
-		</div>
-	</div>
-	<!-- /.row -->
-
-	<!-- Login row -->
-	<div class="row">
-		<div class="col-lg-6 col-lg-offset-3">
-			<div class="panel panel-info">
-				<div class="panel-heading">Signup for membership</div>
-				<div class="panel-body">
+		<div class="col-lg-5">
 			<?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
 				<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
@@ -55,8 +34,10 @@ $fieldOptions2 = [
 
 				<?= $form->field($model, 'rememberMe')->checkbox() ?>
 
-				<div style="color:#999;margin:1em 0">
+				<div class="my-1 mx-0" style="color:#999;">
 					If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
+					<br>
+					Need new verification email? <?= Html::a('Resend', ['site/resend-verification-email']) ?>
 				</div>
 
 				<div class="form-group">
@@ -64,30 +45,6 @@ $fieldOptions2 = [
 				</div>
 
 			<?php ActiveForm::end(); ?>
-				</div>
-			</div>
-
-			<p class="text-center">- OR -</p>
-
-		</div>
-
-		<div class="col-lg-3 col-lg-offset-3">
-			<?= BSocial::b('github')->caption('Login using @@@') ?>
-			<?= BSocial::b('google')->caption('Login using @@@') ?>
-		</div>
-		<div class="col-lg-3">
-			<?= BSocial::b('twitter')->caption('Login using @@@') ?>
-			<?= BSocial::b('facebook')->caption('Login using @@@') ?>
 		</div>
 	</div>
-
-	<?= $this->render('_footer.php') ?>
-
-	<!-- Page Code Location - remove in production -->
-	<div class="row">
-		<div class="col-lg-12">
-			<code><?= __FILE__ ?></code>
-		</div>
-	</div>
-
 </div>
