@@ -52,6 +52,9 @@ class P2PortfolioController extends Controller
 	{
 		$dataProvider = PortfolioItemProvider::demoProvider(4);
 
+		$bundle = P2PortfolioDemoAsset::register($this->view);
+		$this->view->params['p2mThemeAssetUrl'] = $bundle->baseUrl;
+
 		return $this->render('index', [
 			'dataProvider' => $dataProvider,
 		]);
@@ -104,9 +107,11 @@ class P2PortfolioController extends Controller
 
 	public function actionStylishPortfolio()
 	{
-		$themeAsset = P2StylishPortfolioAsset::register($this);
-		$this->view->params['themeAssetUrl'] = $themeAsset->baseUrl;
 		$this->layout = '@p2m/sb/views/portfolio/layouts/stylish';
+
+		$bundle = P2StylishPortfolioAsset::register($this->view);
+		$this->view->params['p2mThemeAssetUrl'] = $bundle->baseUrl;
+
 		return $this->render('stylish-portfolio');
 	}
 }

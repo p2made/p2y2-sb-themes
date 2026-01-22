@@ -22,7 +22,11 @@ use yii\bootstrap5\Html;
 $appName   = Yii::$app->name;
 $pageTitle = 'Portfolio';
 //$pageTitle = Html::encode($this->title);
-$themeAssetUrl = $this->params['themeAssetUrl'];
+
+$p2mThemeAssetUrl = $this->params['p2mThemeAssetUrl'] ?? null;
+if ($p2mThemeAssetUrl === null) {
+	throw new \yii\base\InvalidConfigException('p2mThemeAssetUrl not set; ensure the theme asset is registered in the layout.');
+}
 
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag([
@@ -39,7 +43,7 @@ $this->registerMetaTag([
 ]);
 $this->registerLinkTag([
 	'rel' => 'shortcut icon',
-	'href' => $themeAssetUrl . '/ico/favicon.ico'
+	'href' => $p2mThemeAssetUrl . '/ico/favicon.ico'
 ]);
 
 

@@ -19,7 +19,11 @@ use p2m\helpers\BI;
 /** @var yii\web\View $this */
 
 $this->title = 'Stylish Portfolio';
-$themeAssetUrl = $this->params['themeAssetUrl'];
+
+$p2mThemeAssetUrl = $this->params['p2mThemeAssetUrl'] ?? null;
+if ($p2mThemeAssetUrl === null) {
+	throw new \yii\base\InvalidConfigException('p2mThemeAssetUrl not set; ensure the theme asset is registered in the layout.');
+}
 
 $extLink = static function (string $label, string $url, array $options = []): string {
 	$options = array_merge([
@@ -29,7 +33,6 @@ $extLink = static function (string $label, string $url, array $options = []): st
 
 	return Html::a($label, $url, $options);
 };
-
 ?>
 <!-- Page Content -->
 <div>
@@ -124,22 +127,22 @@ $extLink = static function (string $label, string $url, array $options = []): st
 					[
 						'title' => 'Stationary',
 						'desc'  => 'A yellow pencil with envelopes on a clean, blue backdrop!',
-						'img'   => $themeAssetUrl . '/img/portfolio-1.jpg',
+						'img'   => $p2mThemeAssetUrl . '/img/portfolio-1.jpg',
 					],
 					[
 						'title' => 'Ice Cream',
 						'desc'  => 'A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!',
-						'img'   => $themeAssetUrl . '/img/portfolio-2.jpg',
+						'img'   => $p2mThemeAssetUrl . '/img/portfolio-2.jpg',
 					],
 					[
 						'title' => 'Strawberries',
 						'desc'  => 'Strawberries are such a tasty snack, especially with a little sugar on top!',
-						'img'   => $themeAssetUrl . '/img/portfolio-3.jpg',
+						'img'   => $p2mThemeAssetUrl . '/img/portfolio-3.jpg',
 					],
 					[
 						'title' => 'Workspace',
 						'desc'  => 'A yellow workspace with some scissors, pencils, and other objects.',
-						'img'   => $themeAssetUrl . '/img/portfolio-4.jpg',
+						'img'   => $p2mThemeAssetUrl . '/img/portfolio-4.jpg',
 					],
 				];
 

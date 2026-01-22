@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/layouts/stylish-portfolio.php
+ * @p2m/sb/views/portfolio/layouts/stylish.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -17,10 +17,12 @@
 /** @var string $content */
 
 use yii\bootstrap5\Html;
-
+use p2m\helpers\BI;
 use p2m\sb\assets\P2StylishPortfolioAsset;
 
-//$this->params['themeAssetUrl'] = P2StylishPortfolioAsset::register($this)->baseUrl;
+// Register using the View instance ($this), then store into $this->view->params
+//$bundle = P2StylishPortfolioAsset::register($this);
+//$this->view->params['p2mThemeAssetUrl'] = $bundle->baseUrl;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -34,7 +36,11 @@ use p2m\sb\assets\P2StylishPortfolioAsset;
 	<?= $content ?>
 	<?= $this->render('_stylish-footer') ?>
 	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+	<?= Html::a(
+		BI::i(BI::_ARROW_UP)->size(2),
+		'#page-top',
+		['class' => 'scroll-to-top rounded']
+	) ?>
 <?php $this->endBody() ?>
 </body>
 </html>

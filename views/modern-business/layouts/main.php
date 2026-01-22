@@ -21,7 +21,7 @@ use yii\bootstrap5\NavBar;
 
 use p2m\sb\assets\P2ModernBusinessAsset;
 
-$this->params['themeAssetUrl'] = P2ModernBusinessAsset::register($this)->baseUrl;
+$this->params['p2mThemeAssetUrl'] = P2ModernBusinessAsset::register($this)->baseUrl;
 
 ?>
 <?php $this->beginPage() ?>

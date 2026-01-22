@@ -19,10 +19,10 @@ use p2m\sb\assets\P2PortfolioDemoAsset;
 
 $this->title = 'Portfolio';
 
-// Register asset because we need its baseUrl
-//$this->params['themeAssetUrl']  = P2PortfolioDemoAsset::register($this)->baseUrl;
-//$themeAssetUrl = $this->params['themeAssetUrl'];
-$themeAssetUrl = P2PortfolioDemoAsset::register($this)->baseUrl;
+$p2mThemeAssetUrl = $this->params['p2mThemeAssetUrl'] ?? null;
+if ($p2mThemeAssetUrl === null) {
+	throw new \yii\base\InvalidConfigException('p2mThemeAssetUrl not set; ensure the theme asset is registered in the layout.');
+}
 
 // Load demo data
 $data = require dirname(__DIR__, 3) . '/demo/data/p2sb-themes-data.php';
@@ -44,7 +44,7 @@ $tiles = $group['themes'] ?? [];
 					$imgRel = $tile['img'] ?? null;
 
 					$imgUrl = $imgRel
-						? $themeAssetUrl . $imgRel
+						? $p2mThemeAssetUrl . $imgRel
 						: '';
 				?>
 
