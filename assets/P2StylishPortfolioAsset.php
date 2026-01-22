@@ -29,27 +29,13 @@ class P2StylishPortfolioAsset extends AssetBundle
 {
 	public $sourcePath = '@p2m/sb/assets/lib/stylish-portfolio';
 
-	/*
 	public $css = [
 		'css/stylish-portfolio.min.css',
 	];
-	*/
 
-	/*
-	public $cssOptions = [
-	];
-	*/
-
-	/*
 	public $js = [
 		'js/stylish-portfolio.min.js',
 	];
-	*/
-
-	/*
-	public $jsOptions = [
-	];
-	*/
 
 	public $depends = [
 		'p2m\assets\P2CoreAsset',

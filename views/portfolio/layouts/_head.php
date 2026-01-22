@@ -20,8 +20,9 @@ use yii\bootstrap5\Html;
 
 // App / page title
 $appName   = Yii::$app->name;
-$pageTitle = 'Modern Business';
+$pageTitle = 'Portfolio';
 //$pageTitle = Html::encode($this->title);
+$themeAssetUrl = $this->params['themeAssetUrl'];
 
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag([
@@ -36,6 +37,11 @@ $this->registerMetaTag([
 	'name' => 'author',
 	'content' => 'Pedro Plowman'
 ]);
+$this->registerLinkTag([
+	'rel' => 'shortcut icon',
+	'href' => $themeAssetUrl . '/ico/favicon.ico'
+]);
+
 
 ?>
 <title><?= $pageTitle ?></title><!-- DATA -->

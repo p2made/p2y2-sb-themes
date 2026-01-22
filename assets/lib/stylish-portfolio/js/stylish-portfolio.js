@@ -27,15 +27,15 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     function _toggleMenuIcon() {
-        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
-        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-times');
+        const menuToggleBars = document.body.querySelector('.menu-toggle > .bi-list');
+        const menuToggleTimes = document.body.querySelector('.menu-toggle > .bi-x');
         if (menuToggleBars) {
-            menuToggleBars.classList.remove('fa-bars');
-            menuToggleBars.classList.add('fa-times');
+            menuToggleBars.classList.remove('bi-list');
+            menuToggleBars.classList.add('bi-x');
         }
         if (menuToggleTimes) {
-            menuToggleTimes.classList.remove('fa-times');
-            menuToggleTimes.classList.add('fa-bars');
+            menuToggleTimes.classList.remove('bi-x');
+            menuToggleTimes.classList.add('bi-list');
         }
     }
 

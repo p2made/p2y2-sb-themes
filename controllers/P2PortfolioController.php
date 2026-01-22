@@ -21,6 +21,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use p2m\sb\models\PortfolioItem;
 use p2m\sb\models\PortfolioItemProvider;
+use p2m\sb\assets\P2PortfolioDemoAsset;
+use p2m\sb\assets\P2StylishPortfolioAsset;
 
 use yii\data\Pagination;
 
@@ -102,6 +104,9 @@ class P2PortfolioController extends Controller
 
 	public function actionStylishPortfolio()
 	{
+		$themeAsset = P2StylishPortfolioAsset::register($this);
+		$this->view->params['themeAssetUrl'] = $themeAsset->baseUrl;
+		$this->layout = '@p2m/sb/views/portfolio/layouts/stylish';
 		return $this->render('stylish-portfolio');
 	}
 }

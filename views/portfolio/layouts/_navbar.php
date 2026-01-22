@@ -20,7 +20,7 @@ use yii\helpers\Url;
 
 // Basic items (adjust routes as you like)
 $items = [
-	['label' => 'Home',    'url' => ['/']],
+	['label' => 'Home', 'url' => ['/']],
 ];
 ?>
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/layouts/main.php
+ * @p2m/sb/views/portfolio/layouts/stylish-portfolio.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -18,9 +18,9 @@
 
 use yii\bootstrap5\Html;
 
-use p2m\sb\assets\P2PortfolioDemoAsset;
+use p2m\sb\assets\P2StylishPortfolioAsset;
 
-$this->params['themeAssetUrl'] = P2PortfolioDemoAsset::register($this)->baseUrl;
+//$this->params['themeAssetUrl'] = P2StylishPortfolioAsset::register($this)->baseUrl;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -28,13 +28,13 @@ $this->params['themeAssetUrl'] = P2PortfolioDemoAsset::register($this)->baseUrl;
 <head>
 	<?= $this->render('_head') ?>
 </head>
-<body class="d-flex flex-column h-100">
+<body id="page-top">
 <?php $this->beginBody() ?>
-	<main class="flex-shrink-0">
-		<?= $this->render('_navbar') ?>
-		<?= $content ?>
-	</main>
-	<?= $this->render('_footer') ?>
+	<?= $this->render('_stylish-nav') ?>
+	<?= $content ?>
+	<?= $this->render('_stylish-footer') ?>
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
 <?php $this->endBody() ?>
 </body>
 </html>
