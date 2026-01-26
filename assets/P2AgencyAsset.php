@@ -29,27 +29,13 @@ class P2AgencyAsset extends AssetBundle
 {
 	public $sourcePath = '@p2m/sb/assets/lib/agency';
 
-	/*
 	public $css = [
 		'css/agency.min.css',
 	];
-	*/
 
-	/*
-	public $cssOptions = [
-	];
-	*/
-
-	/*
 	public $js = [
 		'js/agency.min.js',
 	];
-	*/
-
-	/*
-	public $jsOptions = [
-	];
-	*/
 
 	public $depends = [
 		'p2m\assets\P2CoreAsset',
