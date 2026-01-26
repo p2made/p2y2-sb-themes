@@ -19,9 +19,10 @@ return [
 			'author' => 'Pedro Plowman',
 			'year'   => '2026',
 
+
 			// Identity
 			'title'  => 'P2Y2 SB Themes',
-			'org'    => 'p2made',
+			'org'    => null,
 			'owner'  => null,
 
 			// Attribution

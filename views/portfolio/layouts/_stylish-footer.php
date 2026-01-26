@@ -11,7 +11,7 @@
 
 use yii\bootstrap5\Html;
 use p2m\helpers\BI;
-use p2m\sb\helpers\P2CopyrightHelper;
+use p2m\helpers\Copyright;
 
 /** @var yii\web\View $this */
 ?>
@@ -42,6 +42,6 @@ use p2m\sb\helpers\P2CopyrightHelper;
 			</li>
 		</ul>
 
-		<?= P2CopyrightHelper::c() ?>
+		<?= Copyright::c() ?>
 	</div>
 </footer>
