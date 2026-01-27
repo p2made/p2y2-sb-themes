@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2BasicLayoutsAsset
+ * @class \p2m\th\assets\P2BasicLayoutsAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2BasicLayoutsAsset::register($this);
+ * p2m\th\assets\P2BasicLayoutsAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2BasicLayoutsAsset',
+ *     'p2m\th\assets\P2BasicLayoutsAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2BasicLayoutsAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/basic-layouts';
+	public $sourcePath = '@p2m/th/assets/lib/basic-layouts';
 
 	/*
 	public $css = [

@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Blog',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2BlogController::class,
+			'class' => p2m\th\controllers\P2BlogController::class,
 		],
 	],
 	'components' => [

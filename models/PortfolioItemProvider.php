@@ -10,10 +10,10 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\models\PortfolioItemProvider
+ * @class \p2m\th\models\PortfolioItemProvider
  */
 
-namespace p2m\sb\models;
+namespace p2m\th\models;
 
 use yii\data\ArrayDataProvider;
 

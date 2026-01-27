@@ -10,22 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\_P2ThemeAssetTemplate
+ * @class \p2m\th\assets\_P2ThemeAssetTemplate
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\_P2ThemeAssetTemplate::register($this);
+ * p2m\th\assets\_P2ThemeAssetTemplate::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\_P2ThemeAssetTemplate',
+ *     'p2m\th\assets\_P2ThemeAssetTemplate',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
+
+use yii\web\AssetBundle;
 
 class _P2ThemeAssetTemplate extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/_theme_name_';
+	public $sourcePath = '@p2m/th/assets/lib/_theme_name_';
 
 	/*
 	public $css = [

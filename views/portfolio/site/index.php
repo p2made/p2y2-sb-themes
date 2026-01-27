@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/site/index.php
+ * @p2m/th/views/portfolio/site/index.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -15,7 +15,7 @@
 
 /** @var yii\web\View $this */
 use yii\bootstrap5\Html;
-use p2m\sb\assets\P2PortfolioDemoAsset;
+use p2m\th\assets\P2PortfolioDemoAsset;
 
 $this->title = 'Portfolio';
 

@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2ComingSoonAsset
+ * @class \p2m\th\assets\P2ComingSoonAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2ComingSoonAsset::register($this);
+ * p2m\th\assets\P2ComingSoonAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2ComingSoonAsset',
+ *     'p2m\th\assets\P2ComingSoonAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2ComingSoonAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/coming-soon';
+	public $sourcePath = '@p2m/th/assets/lib/coming-soon';
 
 	/*
 	public $css = [

@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Navigation',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2NavigationController::class,
+			'class' => p2m\th\controllers\P2NavigationController::class,
 		],
 	],
 	'components' => [

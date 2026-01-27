@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Basic Layouts',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2BasicLayoutsController::class,
+			'class' => p2m\th\controllers\P2BasicLayoutsController::class,
 		],
 	],
 	'components' => [

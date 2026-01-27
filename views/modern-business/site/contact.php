@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/modern-business/site/contact.php
+ * @p2m/th/views/modern-business/site/contact.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -17,7 +17,7 @@ use yii\bootstrap5\Html;
 use yii\bootstrap5\ActiveForm;
 use yii\captcha\Captcha;
 
-p2m\sb\assets\SBFormsAsset::register($this);
+p2m\th\assets\SBFormsAsset::register($this);
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;

@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Stylish Portfolio',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2StylishPortfolioController::class,
+			'class' => p2m\th\controllers\P2StylishPortfolioController::class,
 		],
 	],
 	'components' => [

@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/modern-business/layouts/main.php
+ * @p2m/th/views/modern-business/layouts/main.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -19,7 +19,7 @@ use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 
-use p2m\sb\assets\P2ModernBusinessAsset;
+use p2m\th\assets\P2ModernBusinessAsset;
 
 $this->params['themeAssetUrl'] = P2ModernBusinessAsset::register($this)->baseUrl;
 

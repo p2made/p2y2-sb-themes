@@ -10,22 +10,22 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2FormContactSplitImageAsset
+ * @class \p2m\th\assets\P2FormContactSplitImageAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2FormContactSplitImageAsset::register($this);
+ * p2m\th\assets\P2FormContactSplitImageAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2FormContactSplitImageAsset',
+ *     'p2m\th\assets\P2FormContactSplitImageAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 class P2FormContactSplitImageAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/contact-form-split-image';
+	public $sourcePath = '@p2m/th/assets/lib/contact-form-split-image';
 
 	public $css = [
 		'css/contact-form-split-image.min.css',

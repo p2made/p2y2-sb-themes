@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Business Casual',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2BusinessCasualController::class,
+			'class' => p2m\th\controllers\P2BusinessCasualController::class,
 		],
 	],
 	'components' => [

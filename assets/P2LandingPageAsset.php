@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2LandingPageAsset
+ * @class \p2m\th\assets\P2LandingPageAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2LandingPageAsset::register($this);
+ * p2m\th\assets\P2LandingPageAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2LandingPageAsset',
+ *     'p2m\th\assets\P2LandingPageAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2LandingPageAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/landing-page';
+	public $sourcePath = '@p2m/th/assets/lib/landing-page';
 
 	/*
 	public $css = [

@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Forms',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2FormsController::class,
+			'class' => p2m\th\controllers\P2FormsController::class,
 		],
 	],
 	'components' => [

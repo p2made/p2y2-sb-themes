@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2CreativeAsset
+ * @class \p2m\th\assets\P2CreativeAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2CreativeAsset::register($this);
+ * p2m\th\assets\P2CreativeAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2CreativeAsset',
+ *     'p2m\th\assets\P2CreativeAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2CreativeAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/creative';
+	public $sourcePath = '@p2m/th/assets/lib/creative';
 
 	/*
 	public $css = [

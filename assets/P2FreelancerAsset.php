@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2FreelancerAsset
+ * @class \p2m\th\assets\P2FreelancerAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2FreelancerAsset::register($this);
+ * p2m\th\assets\P2FreelancerAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2FreelancerAsset',
+ *     'p2m\th\assets\P2FreelancerAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2FreelancerAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/freelancer';
+	public $sourcePath = '@p2m/th/assets/lib/freelancer';
 
 	/*
 	public $css = [

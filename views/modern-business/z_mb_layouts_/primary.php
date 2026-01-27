@@ -15,7 +15,7 @@
 use yii\bootstrap\Html;
 use common\widgets\Alert;
 
-p2m\SB\assets\ModernBusinessAsset::register($this);
+p2m\th\assets\ModernBusinessAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

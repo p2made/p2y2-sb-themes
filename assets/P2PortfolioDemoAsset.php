@@ -23,24 +23,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2PortfolioDemoAsset
+ * @class \p2m\th\assets\P2PortfolioDemoAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2PortfolioDemoAsset::register($this);
+ * p2m\th\assets\P2PortfolioDemoAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2PortfolioDemoAsset',
+ *     'p2m\th\assets\P2PortfolioDemoAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2PortfolioDemoAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/portfolio';
+	public $sourcePath = '@p2m/th/assets/lib/portfolio';
 
 	public $depends = [
 		'p2m\assets\P2CoreAsset',

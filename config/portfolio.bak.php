@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Portfolio',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2PortfolioController::class,
+			'class' => p2m\th\controllers\P2PortfolioController::class,
 		],
 	],
 	'components' => [
@@ -21,7 +21,7 @@ return [
 				'item-details/<id:\d+>' => 'site/item-details',
 
 				[
-					'class' => \p2m\sb\components\P2OneBasedPageUrlRule::class,
+					'class' => \p2m\th\components\P2OneBasedPageUrlRule::class,
 					'pattern' => '<page:(?:1-column|2-column|3-column|4-column)>/<p:\d+>',
 					'route' => 'site/page',
 				],

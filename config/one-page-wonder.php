@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – One Page Wonder',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2OnePageWonderController::class,
+			'class' => p2m\th\controllers\P2OnePageWonderController::class,
 		],
 	],
 	'components' => [

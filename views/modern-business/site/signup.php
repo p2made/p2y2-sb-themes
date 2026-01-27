@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/modern-business/site/signup.php
+ * @p2m/th/views/modern-business/site/signup.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026

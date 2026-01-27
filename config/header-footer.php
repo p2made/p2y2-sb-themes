@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Header Footer',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2HeaderFooterController::class,
+			'class' => p2m\th\controllers\P2HeaderFooterController::class,
 		],
 	],
 	'components' => [

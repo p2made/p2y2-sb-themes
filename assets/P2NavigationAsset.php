@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2NavigationAsset
+ * @class \p2m\th\assets\P2NavigationAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2NavigationAsset::register($this);
+ * p2m\th\assets\P2NavigationAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2NavigationAsset',
+ *     'p2m\th\assets\P2NavigationAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2NavigationAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/navigation';
+	public $sourcePath = '@p2m/th/assets/lib/navigation';
 
 	/*
 	public $css = [

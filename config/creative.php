@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Creative',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2CreativeController::class,
+			'class' => p2m\th\controllers\P2CreativeController::class,
 		],
 	],
 	'components' => [

@@ -10,10 +10,10 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\models\PortfolioItem
+ * @class \p2m\th\models\PortfolioItem
  */
 
-namespace p2m\sb\models;
+namespace p2m\th\models;
 
 use yii\base\Model;
 use p2m\helpers\Picsum;

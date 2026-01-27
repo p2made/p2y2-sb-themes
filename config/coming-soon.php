@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Coming Soon',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2ComingSoonController::class,
+			'class' => p2m\th\controllers\P2ComingSoonController::class,
 		],
 	],
 	'components' => [

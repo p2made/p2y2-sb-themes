@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Heroic Features',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2HeroicFeaturesController::class,
+			'class' => p2m\th\controllers\P2HeroicFeaturesController::class,
 		],
 	],
 	'components' => [

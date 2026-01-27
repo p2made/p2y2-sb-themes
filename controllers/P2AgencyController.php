@@ -10,10 +10,10 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\controllers\P2AgencyController
+ * @class \p2m\th\controllers\P2AgencyController
  */
 
-namespace p2m\sb\controllers;
+namespace p2m\th\controllers;
 
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
@@ -28,6 +28,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use p2m\th\assets\P2AgencyAsset;
 
 /**
  * Site controller
@@ -88,6 +89,9 @@ class P2AgencyController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$bundle = P2AgencyAsset::register($this->view);
+		$this->view->params['themeAssetUrl'] = $bundle->baseUrl;
+
 		return $this->render('index');
 	}
 

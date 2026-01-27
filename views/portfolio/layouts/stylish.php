@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/layouts/stylish.php
+ * @p2m/th/views/portfolio/layouts/stylish.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -18,7 +18,7 @@
 
 use yii\bootstrap5\Html;
 use p2m\helpers\BI;
-use p2m\sb\assets\P2StylishPortfolioAsset;
+use p2m\th\assets\P2StylishPortfolioAsset;
 
 // Register using the View instance ($this), then store into $this->view->params
 //$bundle = P2StylishPortfolioAsset::register($this);

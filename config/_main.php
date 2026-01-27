@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/config/_main.php
+ * @p2m/th/config/_main.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026

@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/layouts/_head.php
+ * @p2m/th/views/portfolio/layouts/_head.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
