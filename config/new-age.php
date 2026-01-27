@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – New Age',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2NewAgeController::class,
+			'class' => p2m\th\controllers\P2NewAgeController::class,
 		],
 	],
 	'components' => [

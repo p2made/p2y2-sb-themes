@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2StylishPortfolioAsset
+ * @class \p2m\th\assets\P2StylishPortfolioAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2StylishPortfolioAsset::register($this);
+ * p2m\th\assets\P2StylishPortfolioAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2StylishPortfolioAsset',
+ *     'p2m\th\assets\P2StylishPortfolioAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2StylishPortfolioAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/stylish-portfolio';
+	public $sourcePath = '@p2m/th/assets/lib/stylish-portfolio';
 
 	public $css = [
 		'css/stylish-portfolio.min.css',

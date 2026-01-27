@@ -10,22 +10,22 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2FormContactWithValidationAsset
+ * @class \p2m\th\assets\P2FormContactWithValidationAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2FormContactWithValidationAsset::register($this);
+ * p2m\th\assets\P2FormContactWithValidationAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2FormContactWithValidationAsset',
+ *     'p2m\th\assets\P2FormContactWithValidationAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 class P2FormContactWithValidationAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/contact-form-with-validation';
+	public $sourcePath = '@p2m/th/assets/lib/contact-form-with-validation';
 
 	public $css = [
 		'css/contact-form-with-validation.min.css',

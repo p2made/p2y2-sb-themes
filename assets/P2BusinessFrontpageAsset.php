@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2BusinessFrontpageAsset
+ * @class \p2m\th\assets\P2BusinessFrontpageAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2BusinessFrontpageAsset::register($this);
+ * p2m\th\assets\P2BusinessFrontpageAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2BusinessFrontpageAsset',
+ *     'p2m\th\assets\P2BusinessFrontpageAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2BusinessFrontpageAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/business-frontpage';
+	public $sourcePath = '@p2m/th/assets/lib/business-frontpage';
 
 	/*
 	public $css = [

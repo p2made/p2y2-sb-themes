@@ -10,46 +10,28 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2FormsAsset
+ * @class \p2m\th\assets\P2FormsAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2FormsAsset::register($this);
+ * p2m\th\assets\P2FormsAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2FormsAsset',
+ *     'p2m\th\assets\P2FormsAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2FormsAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/forms';
+	public $sourcePath = '@p2m/th/assets/lib/sb-forms';
 
-	/*
-	public $css = [
-		'css/forms.min.css',
-	];
-	*/
-
-	/*
-	public $cssOptions = [
-	];
-	*/
-
-	/*
 	public $js = [
-		'js/forms.min.js',
+		'js/sb-forms-0.4.1.min.js',
 	];
-	*/
-
-	/*
-	public $jsOptions = [
-	];
-	*/
 
 	public $depends = [
 		'p2m\assets\P2CoreAsset',

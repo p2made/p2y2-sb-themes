@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/config/portfolio.php
+ * @p2m/th/config/portfolio.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -18,7 +18,7 @@ return [
 	'name' => 'P2SB Theme – Portfolio',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2PortfolioController::class,
+			'class' => p2m\th\controllers\P2PortfolioController::class,
 		],
 	],
 	'components' => [

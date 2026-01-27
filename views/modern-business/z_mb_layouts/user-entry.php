@@ -16,7 +16,7 @@ use yii\bootstrap\NavBar;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-p2m\SB\assets\ModernBusinessAsset::register($this);
+p2m\th\assets\ModernBusinessAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

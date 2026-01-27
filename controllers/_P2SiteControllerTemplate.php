@@ -10,10 +10,10 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\controllers\_P2SiteControllerTemplate
+ * @class \p2m\th\controllers\_P2SiteControllerTemplate
  */
 
-namespace p2m\sb\controllers;
+namespace p2m\th\controllers;
 
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;

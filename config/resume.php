@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Resume',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2ResumeController::class,
+			'class' => p2m\th\controllers\P2ResumeController::class,
 		],
 	],
 	'components' => [

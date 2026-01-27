@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Business Frontpage',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2BusinessFrontpageController::class,
+			'class' => p2m\th\controllers\P2BusinessFrontpageController::class,
 		],
 	],
 	'components' => [

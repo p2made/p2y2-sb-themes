@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2ResumeAsset
+ * @class \p2m\th\assets\P2ResumeAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2ResumeAsset::register($this);
+ * p2m\th\assets\P2ResumeAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2ResumeAsset',
+ *     'p2m\th\assets\P2ResumeAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2ResumeAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/resume';
+	public $sourcePath = '@p2m/th/assets/lib/resume';
 
 	/*
 	public $css = [

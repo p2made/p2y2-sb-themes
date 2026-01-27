@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/site/_1columnItem.php
+ * @p2m/th/views/portfolio/site/_1columnItem.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -13,11 +13,11 @@
  * @package p2made/p2y2-sb-themes
  */
 
-/** @var \p2m\sb\models\PortfolioItem $model */
+/** @var \p2m\th\models\PortfolioItem $model */
 
 use yii\bootstrap5\Html;
 
-/** @var p2m\sb\models\PortfolioItem $model */
+/** @var p2m\th\models\PortfolioItem $model */
 ?>
 
 <div class="row mb-4">

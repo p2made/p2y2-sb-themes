@@ -10,22 +10,22 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2FormModernSignInWithSplitScreenatAsset
+ * @class \p2m\th\assets\P2FormModernSignInWithSplitScreenatAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2FormModernSignInWithSplitScreenatAsset::register($this);
+ * p2m\th\assets\P2FormModernSignInWithSplitScreenatAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2FormModernSignInWithSplitScreenatAsset',
+ *     'p2m\th\assets\P2FormModernSignInWithSplitScreenatAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 class P2FormModernSignInWithSplitScreenatAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/modern-sign-in-page-with-split-screen-format';
+	public $sourcePath = '@p2m/th/assets/lib/modern-sign-in-page-with-split-screen-format';
 
 	public $css = [
 		'css/modern-sign-in-page-with-split-screen-format.min.css',

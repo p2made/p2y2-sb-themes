@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2OnePageWonderAsset
+ * @class \p2m\th\assets\P2OnePageWonderAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2OnePageWonderAsset::register($this);
+ * p2m\th\assets\P2OnePageWonderAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2OnePageWonderAsset',
+ *     'p2m\th\assets\P2OnePageWonderAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2OnePageWonderAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/one-page-wonder';
+	public $sourcePath = '@p2m/th/assets/lib/one-page-wonder';
 
 	/*
 	public $css = [

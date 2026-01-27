@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/config/_params.php
+ * @p2m/th/config/_params.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -15,14 +15,35 @@
 return [
 	'p2params' => [
 		'ip' => [
-			'item'     => 'p2made/p2y2-sb-themes',
-			'type'     => 'yii2-extension',
-			'author'   => 'Pedro Plowman',
-			'email'    => 'pedrofp@me.com',
-			'page'     => 'https://github.com/p2made',
-			'year'     => '2026',
-			'license'  => 'MIT',
-			//'link'     => '_link_to_license_if_included_',
+			// Mandatory
+			'author' => 'Pedro Plowman',
+			'year'   => '2026',
+
+
+			// Identity
+			'title'  => 'P2Y2 SB Themes',
+			'org'    => null,
+			'owner'  => null,
+
+			// Attribution
+			'url'    => 'https://github.com/p2made',
+			'page'   => 'https://github.com/p2made/p2y2-sb-themes',
+			'email'  => 'pedrofp@me.com',
+
+			// Classification
+			'item'   => 'p2made/p2y2-sb-themes',
+			'type'   => 'yii2-extension',
+
+			// Legal
+			'license'    => 'MIT',
+			'licenseUrl' => 'https://github.com/p2made/p2y2-sb-themes/blob/master/README.md',
+			//'licenseUrl' => 'https://opensource.org/licenses/MIT',
+			'copyright'  => null, // optional override
+			'notice'     => null,
+
+			// Optional future
+			'contributors' => [],
+			'jurisdiction' => null,
 		],
 	],
 ];

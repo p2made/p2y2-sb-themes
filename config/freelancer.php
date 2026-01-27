@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Freelancer',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2FreelancerController::class,
+			'class' => p2m\th\controllers\P2FreelancerController::class,
 		],
 	],
 	'components' => [

@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2GrayscaleAsset
+ * @class \p2m\th\assets\P2GrayscaleAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2GrayscaleAsset::register($this);
+ * p2m\th\assets\P2GrayscaleAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2GrayscaleAsset',
+ *     'p2m\th\assets\P2GrayscaleAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2GrayscaleAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/grayscale';
+	public $sourcePath = '@p2m/th/assets/lib/grayscale';
 
 	/*
 	public $css = [

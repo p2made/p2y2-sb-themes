@@ -10,10 +10,10 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\controllers\P2PortfolioController
+ * @class \p2m\th\controllers\P2PortfolioController
  */
 
-namespace p2m\sb\controllers;
+namespace p2m\th\controllers;
 
 use Yii;
 use yii\web\Controller;
@@ -25,8 +25,8 @@ use yii\filters\VerbFilter;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 
-use p2m\sb\models\PortfolioItem;
-use p2m\sb\models\PortfolioItemProvider;
+use p2m\th\models\PortfolioItem;
+use p2m\th\models\PortfolioItemProvider;
 
 /**
  * Site controller

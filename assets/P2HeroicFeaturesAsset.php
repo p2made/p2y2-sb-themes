@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2HeroicFeaturesAsset
+ * @class \p2m\th\assets\P2HeroicFeaturesAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2HeroicFeaturesAsset::register($this);
+ * p2m\th\assets\P2HeroicFeaturesAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2HeroicFeaturesAsset',
+ *     'p2m\th\assets\P2HeroicFeaturesAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2HeroicFeaturesAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/heroic-features';
+	public $sourcePath = '@p2m/th/assets/lib/heroic-features';
 
 	/*
 	public $css = [

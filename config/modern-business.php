@@ -9,7 +9,7 @@ return [
 	'name' => 'P2SB Theme – Modern Business',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\sb\controllers\P2ModernBusinessController::class,
+			'class' => p2m\th\controllers\P2ModernBusinessController::class,
 		],
 	],
 	'components' => [

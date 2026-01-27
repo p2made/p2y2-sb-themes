@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/site/item-details.php
+ * @p2m/th/views/portfolio/site/item-details.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -16,8 +16,8 @@
 use yii\bootstrap5\Html;
 
 /** @var yii\web\View $this */
-/** @var p2m\sb\models\PortfolioItem $model */
-/** @var p2m\sb\models\PortfolioItem[] $related */
+/** @var p2m\th\models\PortfolioItem $model */
+/** @var p2m\th\models\PortfolioItem[] $related */
 
 $this->title = $model->title;
 //$this->title = 'Portfolio Item Details';

@@ -1,6 +1,6 @@
 <?php
 /**
- * @p2m/sb/views/portfolio/layouts/_footer.php
+ * @p2m/th/views/portfolio/layouts/_footer.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
@@ -15,7 +15,7 @@
 
 use yii\bootstrap5\Html;
 use yii\helpers\Url;
-use p2m\sb\helpers\P2CopyrightHelper;
+use p2m\helpers\Copyright;
 
 /** @var yii\web\View $this */
 ?>
@@ -25,7 +25,7 @@ use p2m\sb\helpers\P2CopyrightHelper;
 		<div class="row align-items-center justify-content-between flex-column flex-sm-row">
 			<div class="col-auto">
 				<div class="small m-0 text-white">
-					<?= P2CopyrightHelper::c() ?>
+					<?= Copyright::c() ?>
 				</div>
 			</div>
 			<div class="col-auto">

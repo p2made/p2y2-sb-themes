@@ -10,24 +10,24 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2FullAsset
+ * @class \p2m\th\assets\P2FullAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2FullAsset::register($this);
+ * p2m\th\assets\P2FullAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2FullAsset',
+ *     'p2m\th\assets\P2FullAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 use yii\web\AssetBundle;
 
 class P2FullAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/full';
+	public $sourcePath = '@p2m/th/assets/lib/full';
 
 	/*
 	public $css = [

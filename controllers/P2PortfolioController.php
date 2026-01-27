@@ -10,19 +10,19 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\controllers\P2PortfolioController
+ * @class \p2m\th\controllers\P2PortfolioController
  */
 
-namespace p2m\sb\controllers;
+namespace p2m\th\controllers;
 
 use Yii;
 
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use p2m\sb\models\PortfolioItem;
-use p2m\sb\models\PortfolioItemProvider;
-use p2m\sb\assets\P2PortfolioDemoAsset;
-use p2m\sb\assets\P2StylishPortfolioAsset;
+use p2m\th\models\PortfolioItem;
+use p2m\th\models\PortfolioItemProvider;
+use p2m\th\assets\P2PortfolioDemoAsset;
+use p2m\th\assets\P2StylishPortfolioAsset;
 
 use yii\data\Pagination;
 
@@ -107,7 +107,7 @@ class P2PortfolioController extends Controller
 
 	public function actionStylishPortfolio()
 	{
-		$this->layout = '@p2m/sb/views/portfolio/layouts/stylish';
+		$this->layout = '@p2m/th/views/portfolio/layouts/stylish';
 
 		$bundle = P2StylishPortfolioAsset::register($this->view);
 		$this->view->params['themeAssetUrl'] = $bundle->baseUrl;

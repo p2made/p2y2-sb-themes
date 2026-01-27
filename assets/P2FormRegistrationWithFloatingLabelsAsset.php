@@ -10,22 +10,22 @@
 
 /**
  * @package p2made/p2y2-sb-themes
- * @class \p2m\sb\assets\P2FormRegistrationWithFloatingLabelsAsset
+ * @class \p2m\th\assets\P2FormRegistrationWithFloatingLabelsAsset
  */
 
 /**
  * Load this asset with...
- * p2m\sb\assets\P2FormRegistrationWithFloatingLabelsAsset::register($this);
+ * p2m\th\assets\P2FormRegistrationWithFloatingLabelsAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\sb\assets\P2FormRegistrationWithFloatingLabelsAsset',
+ *     'p2m\th\assets\P2FormRegistrationWithFloatingLabelsAsset',
  */
 
-namespace p2m\sb\assets;
+namespace p2m\th\assets;
 
 class P2FormRegistrationWithFloatingLabelsAsset extends AssetBundle
 {
-	public $sourcePath = '@p2m/sb/assets/lib/registration-page-with-floating-labels';
+	public $sourcePath = '@p2m/th/assets/lib/registration-page-with-floating-labels';
 
 	public $css = [
 		'css/registration-page-with-floating-labels.min.css',
