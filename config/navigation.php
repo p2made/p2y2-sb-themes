@@ -22,7 +22,7 @@ return [
 		'view' => [
 			'theme' => [
 				'pathMap' => [
-					'@app/views' => '@vendor/p2made/p2y2-sb-themes/views/navigation',
+					'@app/views' => '@vendor/p2made/p2y2-themes/views/navigation',
 				],
 			],
 		],

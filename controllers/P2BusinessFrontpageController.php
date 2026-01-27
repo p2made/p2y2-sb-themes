@@ -9,7 +9,7 @@
  */
 
 /**
- * @package p2made/p2y2-sb-themes
+ * @package p2made/p2y2-themes
  * @class \p2m\th\controllers\P2BusinessFrontpageController
  */
 

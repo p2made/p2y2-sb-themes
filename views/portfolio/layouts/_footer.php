@@ -10,7 +10,7 @@
  */
 
 /**
- * @package p2made/p2y2-sb-themes
+ * @package p2made/p2y2-themes
  */
 
 use yii\bootstrap5\Html;

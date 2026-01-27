@@ -1,5 +1,5 @@
 {
-	"name": "p2made/p2y2-sb-themes",
+	"name": "p2made/p2y2-themes",
 	"description": "Themes from Start Bootstrap, http://startbootstrap.com/, as UIs for Yii 2 Framework.",
 	"type": "yii2-extension",
 	"keywords": [
@@ -9,11 +9,11 @@
 		"ui", "user-interface", "theme",
 		"p2y2", "p2made"
 	],
-	"homepage": "https://github.com/p2made/p2y2-sb-themes",
+	"homepage": "https://github.com/p2made/p2y2-themes",
 	"license": "MIT",
 	"support": {
-		"issues": "https://github.com/p2made/p2y2-sb-themes/issues?state=open",
-		"source": "https://github.com/p2made/p2y2-sb-themes"
+		"issues": "https://github.com/p2made/p2y2-themes/issues?state=open",
+		"source": "https://github.com/p2made/p2y2-themes"
 	},
 	"authors": [
 		{

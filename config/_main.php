@@ -46,7 +46,7 @@ $themeName = 'portfolio'; // e.g. 'agency', 'modern-business', ''
  * stylish-portfolio
  */
 
-$configDir   = dirname(__DIR__, 2) . '/vendor/p2made/p2y2-sb-themes/config/';
+$configDir   = dirname(__DIR__, 2) . '/vendor/p2made/p2y2-themes/config/';
 $themeFile   = $configDir . $themeName . '.php';
 $defaultFile = $configDir . '_default.php';
 
@@ -75,7 +75,7 @@ $config = [
 			'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
 		],
 		'session' => [
-			'name' => 'p2y2-sb-themes',
+			'name' => 'p2y2-themes',
 		],
 		'log' => [
 			'traceLevel' => YII_DEBUG ? 3 : 0,

@@ -22,7 +22,7 @@ return [
 		'view' => [
 			'theme' => [
 				'pathMap' => [
-					'@app/views' => '@vendor/p2made/p2y2-sb-themes/views/agency',
+					'@app/views' => '@vendor/p2made/p2y2-themes/views/agency',
 				],
 			],
 		],
@@ -30,7 +30,7 @@ return [
 			'translations' => [
 				'sw.sb*' => [
 					'class' => \yii\i18n\PhpMessageSource::class,
-					'basePath' => '@vendor/p2made/p2y2-sb-themes/i18n/agency',
+					'basePath' => '@vendor/p2made/p2y2-themes/i18n/agency',
 					'sourceLanguage' => 'en',
 					'fileMap' => [
 						'p2m.th.agency' => 'p2m.th.agency.php',
