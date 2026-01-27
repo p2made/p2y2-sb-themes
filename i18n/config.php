@@ -1,6 +1,6 @@
 <?php
 /**
- * p2y2-sb-themes/i18n/config.php
+ * p2y2-themes/i18n/config.php
  *
  * @author Pedro Plowman
  * @copyright Copyright © Pedro Plowman, 2025
@@ -9,7 +9,7 @@
  */
 
 return [
-	'sourcePath'     => '@vendor/p2made/p2y2-sb-themes',
+	'sourcePath'     => '@vendor/p2made/p2y2-themes',
 	'translator'     => ['\Yii::t', 'Yii::t'],
 	'sourceLanguage' => 'en',
 	'format'         => 'php',

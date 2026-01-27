@@ -10,7 +10,7 @@
  */
 
 /**
- * @package p2made/p2y2-sb-themes
+ * @package p2made/p2y2-themes
  */
 
 /** @var \p2m\th\models\PortfolioItem $model */

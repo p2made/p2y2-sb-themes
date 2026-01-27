@@ -27,16 +27,16 @@ return [
 
 			// Attribution
 			'url'    => 'https://github.com/p2made',
-			'page'   => 'https://github.com/p2made/p2y2-sb-themes',
+			'page'   => 'https://github.com/p2made/p2y2-themes',
 			'email'  => 'pedrofp@me.com',
 
 			// Classification
-			'item'   => 'p2made/p2y2-sb-themes',
+			'item'   => 'p2made/p2y2-themes',
 			'type'   => 'yii2-extension',
 
 			// Legal
 			'license'    => 'MIT',
-			'licenseUrl' => 'https://github.com/p2made/p2y2-sb-themes/blob/master/README.md',
+			'licenseUrl' => 'https://github.com/p2made/p2y2-themes/blob/master/README.md',
 			//'licenseUrl' => 'https://opensource.org/licenses/MIT',
 			'copyright'  => null, // optional override
 			'notice'     => null,

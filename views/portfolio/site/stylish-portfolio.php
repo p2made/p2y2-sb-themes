@@ -10,7 +10,7 @@
  */
 
 /**
- * @package p2made/p2y2-sb-themes
+ * @package p2made/p2y2-themes
  */
 
 use yii\bootstrap5\Html;
@@ -109,7 +109,7 @@ $extLink = static function (string $label, string $url, array $options = []): st
 			<h2 class="mx-auto mb-5">
 				Welcome to <em>your</em> next website!
 			</h2>
-			<?= $extLink('Download Now!', 'https://github.com/p2made/p2y2-sb-themes', ['class' => 'btn btn-primary btn-xl']) ?>
+			<?= $extLink('Download Now!', 'https://github.com/p2made/p2y2-themes', ['class' => 'btn btn-primary btn-xl']) ?>
 		</div>
 	</section>
 
