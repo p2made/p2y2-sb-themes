@@ -1,15 +1,15 @@
 <?php
 /**
- * Theme config: agency
+ * Theme config: triangle
  *
  * Generated 2026-01-12
  */
 
 return [
-	'name' => 'P2SB Theme – Agency',
+	'name' => 'P2SB Theme – Triangle',
 	'controllerMap' => [
 		'site' => [
-			'class' => p2m\th\controllers\P2AgencyController::class,
+			'class' => p2m\th\controllers\P2TriangleController::class,
 		],
 	],
 	'components' => [
@@ -22,7 +22,7 @@ return [
 		'view' => [
 			'theme' => [
 				'pathMap' => [
-					'@app/views' => '@vendor/p2made/p2y2-themes/views/agency',
+					'@app/views' => '@vendor/p2made/p2y2-themes/views/triangle',
 				],
 			],
 		],
@@ -30,10 +30,10 @@ return [
 			'translations' => [
 				'p2m.th*' => [
 					'class' => \yii\i18n\PhpMessageSource::class,
-					'basePath' => '@vendor/p2made/p2y2-themes/i18n/agency',
+					'basePath' => '@vendor/p2made/p2y2-themes/i18n/triangle',
 					'sourceLanguage' => 'en',
 					'fileMap' => [
-						'p2m.th.agency' => 'p2m.th.agency.php',
+						'p2m.th.triangle' => 'p2m.th.triangle.php',
 					],
 				],
 			],
