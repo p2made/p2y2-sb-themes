@@ -90,8 +90,6 @@ $termsUrl   = Url::to(['/site/terms']);
 						'aria-label' => $termsLabel,
 					]
 				) ?>
-				<a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-				<a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
 			</div>
 		</div>
 	</div>

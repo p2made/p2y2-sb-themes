@@ -27,7 +27,6 @@ $themeAssetUrl = $this->params['themeAssetUrl'] ?? null;
 if ($themeAssetUrl === null) {
 	throw new \yii\base\InvalidConfigException('themeAssetUrl not set; ensure the theme asset is registered in the layout.');
 }
-
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag([
 	'name' => 'viewport',
