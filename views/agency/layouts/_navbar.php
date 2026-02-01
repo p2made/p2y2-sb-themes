@@ -12,37 +12,59 @@
 /**
  * @package p2made/p2y2-themes
  */
-use yii\helpers\Url;
 use yii\bootstrap5\Html;
+use p2m\helpers\BI;
 
 /** @var yii\web\View $this */
 /** @var string|null  $title */
-
-// App / page title
-$appName   = Yii::$app->name;
-$pageTitle = 'P2 Agency';
-//$pageTitle = Html::encode($this->title);
 
 $themeAssetUrl = $this->params['themeAssetUrl'] ?? null;
 if ($themeAssetUrl === null) {
 	throw new \yii\base\InvalidConfigException('themeAssetUrl not set; ensure the theme asset is registered in the layout.');
 }
+
+$navItems = [
+	['label' => Yii::t('p2m.th.agency', 'Services'),  'href' => '#services'],
+	['label' => Yii::t('p2m.th.agency', 'Portfolio'), 'href' => '#portfolio'],
+	['label' => Yii::t('p2m.th.agency', 'About'),     'href' => '#about'],
+	['label' => Yii::t('p2m.th.agency', 'Team'),      'href' => '#team'],
+	['label' => Yii::t('p2m.th.agency', 'Contact'),   'href' => '#contact'],
+];
+
+$brandImg = Html::img($themeAssetUrl . '/img/navbar-logo.svg', [
+	'alt'   => 'P2 Agency',
+	//'style' => 'height: 3rem;', // slightly larger than default
+]);
+
+$menuIcon = (string) BI::i(BI::_LIST)->size(2);
 ?>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 	<div class="container">
-		<a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..."></a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-			Menu
-			<i class="fas fa-bars ms-1"></i>
+		<?= Html::a($brandImg, '#page-top', ['class' => 'navbar-brand']) ?>
+
+		<button class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarResponsive"
+			aria-controls="navbarResponsive"
+			aria-expanded="false"
+			aria-label="<?= Yii::t('p2m.th.agency', 'Toggle navigation') ?>">
+			<?= Yii::t('p2m.th.agency', 'Menu') ?>
+			<span class="ms-1"><?= $menuIcon ?></span>
 		</button>
+
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-				<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-				<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-				<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-				<li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-				<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+				<?php foreach ($navItems as $item): ?>
+					<li class="nav-item">
+						<?= Html::a(
+							Html::encode($item['label']),
+							$item['href'],
+							['class' => 'nav-link']
+						) ?>
+					</li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 	</div>

@@ -25,7 +25,7 @@ if ($themeAssetUrl === null) {
 }
 
 // Load demo data
-$data = require dirname(__DIR__, 3) . '/demo/data/p2sb-themes-data.php';
+$data = require dirname(__DIR__, 3) . '/demo/data/_p2-themes-data.php';
 
 $group = $data['portfolio'] ?? null;
 $tiles = $group['themes'] ?? [];

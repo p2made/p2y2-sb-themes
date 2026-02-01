@@ -91,6 +91,7 @@ class P2AgencyController extends Controller
 	{
 		$bundle = P2AgencyAsset::register($this->view);
 		$this->view->params['themeAssetUrl'] = $bundle->baseUrl;
+		$this->view->title = 'P2 Agency';
 
 		return $this->render('index');
 	}

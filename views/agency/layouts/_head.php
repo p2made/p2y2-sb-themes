@@ -20,8 +20,6 @@ use yii\bootstrap5\Html;
 
 // App / page title
 $appName   = Yii::$app->name;
-$pageTitle = 'P2 Agency';
-//$pageTitle = Html::encode($this->title);
 
 $themeAssetUrl = $this->params['themeAssetUrl'] ?? null;
 if ($themeAssetUrl === null) {
@@ -45,7 +43,7 @@ $this->registerLinkTag([
 	'href' => $themeAssetUrl . '/ico/favicon.ico'
 ]);
 ?>
-<title><?= $pageTitle ?></title><!-- DATA -->
+<title><?= Html::encode($this->title) ?></title><!-- DATA -->
 <?php
 	$this->registerCsrfMetaTags();
 	$this->head();

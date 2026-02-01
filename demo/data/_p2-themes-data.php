@@ -1,6 +1,6 @@
 <?php
 /**
- * demo/data/p2sb-themes-data.php
+ * demo/data/_p2-themes-data.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026

@@ -54,14 +54,6 @@ $termsUrl   = Url::to(['/site/terms']);
 						]
 					);
 					echo Html::a(
-						BI::i(BI::_TWITTER)->size(5),
-						'#!',
-						[
-							'class' => 'btn btn-dark btn-social mx-2',
-							'aria-label' => 'Twitter',
-						]
-					);
-					echo Html::a(
 						BI::i(BI::_GITHUB)->size(5),
 						'#!',
 						[
