@@ -28,7 +28,7 @@ return [
 		],
 		'i18n' => [
 			'translations' => [
-				'sw.sb*' => [
+				'p2m.th*' => [
 					'class' => \yii\i18n\PhpMessageSource::class,
 					'basePath' => '@vendor/p2made/p2y2-themes/i18n/agency',
 					'sourceLanguage' => 'en',

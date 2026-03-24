@@ -798,3 +798,28 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+/* Make sure the icon behaves nicely in flex containers */
+.p2-icon-circle > i {
+  display: block;
+}
+.p2m-icon-stack { width: 5rem; height: 5rem; }
+.p2m-icon-stack.md { width: 6rem; height: 6rem; }  /* 1.5× */
+.p2m-icon-stack.lg { width: 7.5rem; height: 7.5rem; }  /* 1.5× */
+.p2m-icon-stack.xl { width: 10rem; height: 10rem; }   /* 2× */
+.p2m-icon-circle {
+	position:absolute; inset:0;
+	border-radius:9999px;
+	background: var(--bs-primary);
+}
+.p2m-icon-foreground {
+	position:absolute; inset:0;
+	display:flex; align-items:center; justify-content:center;
+	color: #fff;
+}
+.p2m-icon-foreground.lg {
+	transform: scale(1.5);
+}
+.p2m-icon-foreground.xl {
+	transform: scale(2);
+}

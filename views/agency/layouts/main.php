@@ -24,8 +24,6 @@ use yii\bootstrap5\NavBar;
 
 use yii\bootstrap5\Html;
 use p2m\th\assets\P2AgencyAsset;
-
-$this->params['themeAssetUrl'] = P2AgencyAsset::register($this)->baseUrl;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

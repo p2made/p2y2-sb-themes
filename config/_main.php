@@ -30,6 +30,7 @@ $themeName = 'portfolio'; // e.g. 'agency', 'modern-business', ''
  * clean-blog
  * coming-soon
  * creative
+ * flat
  * forms
  * freelancer
  * full
@@ -43,7 +44,7 @@ $themeName = 'portfolio'; // e.g. 'agency', 'modern-business', ''
  * one-page-wonder
  * portfolio
  * resume
- * stylish-portfolio
+ * triangle
  */
 
 $configDir   = dirname(__DIR__, 2) . '/vendor/p2made/p2y2-themes/config/';
