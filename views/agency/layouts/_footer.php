@@ -36,32 +36,30 @@ $termsUrl   = Url::to(['/site/terms']);
 				<?= Copyright::c() ?>
 			</div>
 			<div class="col-lg-4 my-3 my-lg-0">
-				<?php
-					echo Html::a(
-						BI::i(BI::_FACEBOOK)->size(5),
-						'#!',
-						[
-							'class' => 'btn btn-dark btn-social mx-2',
-							'aria-label' => 'Facebook',
-						]
-					);
-					echo Html::a(
-						BI::i(BI::_LINKEDIN)->size(5),
-						'#!',
-						[
-							'class' => 'btn btn-dark btn-social mx-2',
-							'aria-label' => 'LinkedIn',
-						]
-					);
-					echo Html::a(
-						BI::i(BI::_GITHUB)->size(5),
-						'#!',
-						[
-							'class' => 'btn btn-dark btn-social mx-2',
-							'aria-label' => 'GitHub',
-						]
-					);
-				?>
+				<?= Html::a(
+					BI::i(BI::_FACEBOOK)->size(5),
+					'#!',
+					[
+						'class' => 'btn btn-dark btn-social mx-2',
+						'aria-label' => 'Facebook',
+					]
+				) ?>
+				<?= Html::a(
+					BI::i(BI::_LINKEDIN)->size(5),
+					'#!',
+					[
+						'class' => 'btn btn-dark btn-social mx-2',
+						'aria-label' => 'LinkedIn',
+					]
+				) ?>
+				<?= Html::a(
+					BI::i(BI::_GITHUB)->size(5),
+					'#!',
+					[
+						'class' => 'btn btn-dark btn-social mx-2',
+						'aria-label' => 'GitHub',
+					]
+				) ?>
 			</div>
 			<div class="col-lg-4 text-lg-ends">
 				<?= Html::a(

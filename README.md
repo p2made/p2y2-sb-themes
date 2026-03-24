@@ -1,4 +1,4 @@
-# P2 Start Bootstrap Themes 5.0.0
+# P2Y2 Themes 5.0.0
 
 [![License](https://poser.pugx.org/p2y2-themes/license)](https://packagist.org/packages/p2made/yii2-p2y2-things-demo)
 [![Total Downloads](https://poser.pugx.org/p2y2-themes/downloads)](https://packagist.org/packages/p2made/yii2-p2y2-things-demo)

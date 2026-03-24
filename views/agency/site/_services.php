@@ -29,7 +29,7 @@ $heading    = $t($data['heading']);
 $subheading = $t($data['subheading']);
 $items      = $data['items'];
 
-/**
+y7
  * Small helper: "icon-in-circle" like the original fa-stack, but using BI.
  * (Keeps the theme look without Font Awesome dependency.)
  */
