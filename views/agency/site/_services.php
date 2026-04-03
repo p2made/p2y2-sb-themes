@@ -5,7 +5,7 @@
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
  * @link https://github.com/p2made
- * @package yii2-sb-themes
+ * @package yii2-themes
  * @license MIT
  */
 
@@ -29,7 +29,7 @@ $heading    = $t($data['heading']);
 $subheading = $t($data['subheading']);
 $items      = $data['items'];
 
-y7
+/*
  * Small helper: "icon-in-circle" like the original fa-stack, but using BI.
  * (Keeps the theme look without Font Awesome dependency.)
  */
@@ -47,7 +47,7 @@ $iconStack = function (string $biConst, string $ariaLabel) {
 ?>
 
 <!-- Services-->
-<header class="page-section" aria-labelledby="<?= Html::encode($titleId) ?>">
+<section class="page-section" aria-labelledby="<?= Html::encode($titleId) ?>">
 	<div class="container">
 		<div class="text-center">
 			<h2 class="section-heading text-uppercase" id="services-title">
@@ -64,7 +64,7 @@ $iconStack = function (string $biConst, string $ariaLabel) {
 					$text  = $t($item['text']);
 				?>
 				<div class="col-md-4">
-					<?= $iconStack($item['icon'], $title) ?>
+					<?= BI::c(BI::i($item['icon']))->l($title)->s(6) ?>
 					<h4 class="my-3"><?= $title ?></h4>
 					<p class="text-muted"><?= $text ?></p>
 				</div>

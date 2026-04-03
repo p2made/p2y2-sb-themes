@@ -1,13 +1,4 @@
 <?php
-/**
- * @p2m/th/views/modern-business/site/error.php
- *
- * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2026
- * @link https://github.com/p2made
- * @package yii2-themes
- * @license MIT
- */
 
 /** @var yii\web\View $this */
 /** @var string $name */

@@ -1,12 +1,16 @@
 <?php
 /**
- * @p2m/th/views/modern-business/layouts/_head.php
+ * @p2m/th/views/test/layouts/_head.php
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2026
  * @link https://github.com/p2made
  * @package yii2-themes
  * @license MIT
+ */
+
+/**
+ * @package p2made/p2y2-themes
  */
 
 use yii\bootstrap5\Html;
@@ -16,11 +20,11 @@ use yii\bootstrap5\Html;
 
 // App / page title
 $appName   = Yii::$app->name;
-$pageTitle = 'Modern Business';
-//$pageTitle = Html::encode($this->title);
 
-$themeAssetUrl = $this->params['themeAssetUrl'];
-
+$themeAssetUrl = $this->params['themeAssetUrl'] ?? null;
+if ($themeAssetUrl === null) {
+	throw new \yii\base\InvalidConfigException('themeAssetUrl not set; ensure the theme asset is registered in the layout.');
+}
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag([
 	'name' => 'viewport',
@@ -28,7 +32,7 @@ $this->registerMetaTag([
 ]);
 $this->registerMetaTag([
 	'name' => 'description',
-	'content' => 'Modern business theme from StartBootstrap'
+	'content' => 'p2y2 test theme'
 ]);
 $this->registerMetaTag([
 	'name' => 'author',
@@ -38,9 +42,8 @@ $this->registerLinkTag([
 	'rel' => 'shortcut icon',
 	'href' => $themeAssetUrl . '/ico/favicon.ico'
 ]);
-
 ?>
-<title><?= $pageTitle ?></title><!-- DATA -->
+<title><?= Html::encode($this->title) ?></title><!-- DATA -->
 <?php
 	$this->registerCsrfMetaTags();
 	$this->head();
